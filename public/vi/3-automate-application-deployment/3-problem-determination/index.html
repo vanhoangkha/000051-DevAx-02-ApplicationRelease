@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Python 2.7 EOS :: DevAx - Chuyển đổi Monoliths sang Microservices - Chuyển đổi Ứng dụng Monolith</title>
+    <title>Xác định lỗi :: DevAx - Chuyển đổi Monoliths sang Microservices - Chuyển đổi Ứng dụng Monolith</title>
 
     
-    <link href="/css/nucleus.css?1619162456" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1619162456" rel="stylesheet">
-    <link href="/css/hybrid.css?1619162456" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1619162456" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1619162456" rel="stylesheet">
-    <link href="/css/auto-complete.css?1619162456" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1619162456" rel="stylesheet">
-    <link href="/css/theme.css?1619162456" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1619162456" rel="stylesheet">
+    <link href="/css/nucleus.css?1619162648" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1619162648" rel="stylesheet">
+    <link href="/css/hybrid.css?1619162648" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1619162648" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1619162648" rel="stylesheet">
+    <link href="/css/auto-complete.css?1619162648" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1619162648" rel="stylesheet">
+    <link href="/css/theme.css?1619162648" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1619162648" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1619162456" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1619162648" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1619162456"></script>
+    <script src="/js/jquery-3.3.1.min.js?1619162648"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1619162456"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1619162456"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1619162648"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1619162648"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1619162456"></script>
+<script type="text/javascript" src="/js/search.js?1619162648"></script>
 
     
   </div>
@@ -329,13 +329,13 @@
  
   
     
-    <li data-nav-id="/vi/3-automate-application-deployment/3-problem-determination/" title="Python 2.7 EOS" class="dd-item 
+    <li data-nav-id="/vi/3-automate-application-deployment/3-problem-determination/" title="Xác định lỗi" class="dd-item 
         
         active
         
         ">
       <a href="/vi/3-automate-application-deployment/3-problem-determination/">
-          <b>3.3.1 </b>Python 2.7 EOS
+          <b>3.3. </b>Xác định lỗi
           
             <i class="fas fa-check read-icon"></i>
           
@@ -848,7 +848,7 @@
             
           
           
-            <a href='/vi/'>Cấu hình tự động phát hành ứng dụng</a> > <a href='/vi/3-automate-application-deployment/'>Triển khai ứng dụng</a> > Python 2.7 EOS
+            <a href='/vi/'>Cấu hình tự động phát hành ứng dụng</a> > <a href='/vi/3-automate-application-deployment/'>Triển khai ứng dụng</a> > Xác định lỗi
           
         
           
@@ -885,7 +885,7 @@
           
             <h1>
               
-              Python 2.7 EOS
+              Xác định lỗi
             </h1>
           
 
@@ -893,44 +893,127 @@
 
 
 
-	<h5 id="cập-nhật-cấu-hình-ebextensions">Cập nhật cấu hình ebextensions</h5>
-<p>Do hiện tại Elastic Beanstalk sử dụng Python 3 nên chúng ta sẽ cần cập nhật lại cấu hình trong thư mục .ebextensions
-nằm trong Project của chúng ta.</p>
-<p>Cập nhật nội dung  file <strong>sshd.config</strong> như hướng dẫn bên dưới.
-Chỉnh sửa <strong>python27-devel</strong> sang <strong>python3-devel</strong>
-Chỉnh sửa <strong>python27-pip</strong> sang <strong>python3-pip</strong>
-Chỉnh sửa <strong>/etc/init.d/sshd restart</strong> sang <strong>sudo service sshd restart</strong></p>
-<pre><code>packages:
-  yum:
-    python3-devel: []
-    python3-pip: []
-    gcc: []
-  python:
-    pycryptodome: []
-    boto3: []
-files:
-  &quot;/usr/local/bin/get_authorized_keys&quot; :
-    mode: &quot;000755&quot;
-    owner: root
-    group: root
-    source: https://awscodestar-templates-common.s3.amazonaws.com/ap-southeast-2/get_authorized_keys
-commands:
-  01_update_ssh_access:
-    command: &gt;
-      sed -i '/AuthorizedKeysCommand /s/.*/AuthorizedKeysCommand \/usr\/local\/bin\/get_authorized_keys/g' /etc/ssh/sshd_config &amp;&amp;
-      sed -i '/AuthorizedKeysCommandUser /s/.*/AuthorizedKeysCommandUser root/g' /etc/ssh/sshd_config &amp;&amp;
-      sudo service sshd restart
+	<h5 id="kiểm-tra-tập-tun-buildspecyml">Kiểm tra tập tun buildspec.yml</h5>
+<p>Tập tin <strong>buildspec.yml</strong> là một phần quan trọng mà bạn cần phải đảm bảo tính chính xác của tập tin này. Tập tin này sẽ chạy qua các giai đoạn mà bạn có thể thấy trong bảng điều khiển bên dưới CodeBuild trong log của nó. 
+Tập tin này được chia thành nhiều phần nhỏ</p>
+<p>install - loại cài đặt mà bạn muốn chạy code. Trong trường hợp này, chúng ta sẽ sử dụng openjdk8.</p>
+<pre><code>phases:
+  install:
+    runtime-versions:
+      java: openjdk8
+    commands:
+      - pip install --upgrade awscli
+</code></pre><p>Tiếp theo là các lệnh bạn muốn chạy trước khi thực hiện build project. Đây là yêu cầu trước khi build project. Và trong ví dụ này, chúng ta sẽ chạy lệnh mvn để biên dịch tất cả các thiết lập cần thiết.</p>
+<pre><code>pre_build:
+  commands:
+    - mvn clean compile test
+</code></pre><p>Kế tiếp là tạo build stage</p>
+<pre><code>build:
+  commands:
+    - mvn war:exploded
+</code></pre><p>Sau khi build mvn, là cách thiết lập môi trường bắt buộc cho mỗi môi trường trong .ebextensions được đọc bởi các ứng dụng được yêu cầu</p>
+<pre><code>  post_build:
+    commands:
+      - cp -r .ebextensions/ target/travelbuddy/
+      - aws cloudformation package --template template.yml --s3-bucket $S3_BUCKET --output-template-file template-export.yml
 
-</code></pre><p>Cập nhật nội dung  file <strong>set-instance-credit-unlimited</strong> như hướng dẫn bên dưới.
-Chỉnh sửa <strong>pip install awscli &ndash;upgrade &ndash;user</strong> sang <strong>pip3 install awscli &ndash;upgrade &ndash;user</strong></p>
-<pre><code>commands:
-  upgrade-aws-cli:
-    command: |
-      pip3 install awscli --upgrade --user
-  set-instance-credit-unlimited:
-    command: |
-      aws ec2 modify-instance-credit-specification --region ap-southeast-1 --instance-credit-specification '[{&quot;InstanceId&quot;: &quot;'&quot;$(wget -q -O - http://169.254.169.254/latest/meta-data/instance-id)&quot;'&quot;,&quot;CpuCredits&quot;: &quot;unlimited&quot;}]'
-</code></pre><p>Sau khi chỉnh sửa xong , thực hiện commit và push code lên Code Commit để kích hoạt pipeline.</p>
+      # Do not remove this statement. This command is required for AWS CodeStar projects.
+      # Update the AWS Partition, AWS Region, account ID and project ID in the project ARN on template-configuration.json file so AWS CloudFormation can tag project resources.
+      - sed -i.bak 's/\$PARTITION\$/'${PARTITION}'/g;s/\$AWS_REGION\$/'${AWS_REGION}'/g;s/\$ACCOUNT_ID\$/'${ACCOUNT_ID}'/g;s/\$PROJECT_ID\$/'${PROJECT_ID}'/g' template-configuration.json
+artifacts:
+  type: zip
+  files:
+    - template-export.yml
+    - template-configuration.json
+</code></pre><ol start="2">
+<li>Kiểm tra bảng điều khiển <strong>CodeBuild</strong> 
+Kiểm tra bảng điều khiển CodeBuild và xem có lỗi nào xuất hiện trong quá trình triển khai hay không.
+Nếu có, chọn xem chi tiết để biết lỗi xảy ra là gì.
+<img src="../../../images/3/31.png?width=90pc" alt="Error">
+Truy cập Buildlog tab và cuộn xuống phần log báo lỗi.
+Trong ví dụ này, bạn có thể thấy địa chỉ truy cập của root trong tập tin template.yml không chính xác.</li>
+</ol>
+<pre><code>Unable to upload artifact target/ROOT referenced by SourceBundle parameter of EBApplicationVersion resource.
+Parameter SourceBundle of resource EBApplicationVersion refers to a file or folder that does not exist /codebuild/output/src812543603/src/target/ROOT
+
+[Container] 2020/06/05 02:16:17 Command did not exit successfully aws cloudformation package --template template.yml --s3-bucket $S3_BUCKET --output-template-file template-export.yml exit status 255
+[Container] 2020/06/05 02:16:17 Phase complete: POST_BUILD State: FAILED
+[Container] 2020/06/05 02:16:17 Phase context status code: COMMAND_EXECUTION_ERROR Message: Error while executing command: aws cloudformation package --template template.yml --s3-bucket $S3_BUCKET --output-template-file template-export.yml. Reason: exit status 255
+</code></pre><p>Đây là lỗi trong tập tin template.yml cần được thay đổi:</p>
+<pre><code>EBApplicationVersion:
+  Description: The version of the AWS Elastic Beanstalk application to be created for this project.
+  Type: AWS::ElasticBeanstalk::ApplicationVersion
+  Properties:
+    ApplicationName: !Ref &quot;EBApplication&quot;
+    Description: The application version number.
+    SourceBundle: &quot;target/ROOT&quot;
+</code></pre><p>thành</p>
+<pre><code>EBApplicationVersion:
+  Description: The version of the AWS Elastic Beanstalk application to be created for this project.
+  Type: AWS::ElasticBeanstalk::ApplicationVersion
+  Properties:
+    ApplicationName: !Ref &quot;EBApplication&quot;
+    Description: The application version number.
+    SourceBundle: &quot;target/travelbuddy&quot;
+</code></pre><ol start="3">
+<li>Cập nhật Elastic beanstalk có thành công hay không? 
+Truy cập Elastic beanstalk, vào ứng dụng travelbuddy và chọn Request Logs.
+<img src="../../../images/3/32.png?width=90pc" alt="RequestLogs">
+Ở đây có 2 loại log là Last 100 Lines và Full Logs. Chọn loại phù hợp và tải về. 
+<img src="../../../images/3/33.png?width=90pc" alt="RequestLogs">
+Kiểm tra các tập tin log đã tải về để xem tại sao máy chủ lại không khởi động được.
+Dưới đây là một vài vấn đề ví dụ:</li>
+</ol>
+<ul>
+<li>Ví dụ về việc giao tiếp giữa client và RDS server không hoạt động</li>
+</ul>
+<pre><code>05-Jun-2020 03:27:26.514 SEVERE [localhost-startStop-1] org.apache.tomcat.jdbc.pool.ConnectionPool.init Unable to create initial connections of pool.
+	com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+		at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+		at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+		at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+		at com.mysql.cj.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:456)
+		at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+</code></pre><p>Trong ví dụ này, RDS endpoint được khai báo trong .ebexentions sai. Sửa lại RDS endpoint sẽ khắc phục được lỗi này.</p>
+<ul>
+<li>Ví dụ về việc không tồn tại table trong RDS:</li>
+</ul>
+<pre><code>java.sql.SQLSyntaxErrorException: Table 'travelbuddy.flightspecial' doesn't exist
+	com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+</code></pre><p>Để khắc phục lỗi này, đăng nhập vào mysql và truy cập vào database, thực hiện lại các phần tạo databse đã hướng dẫn ở bài lab đầu tiên.</p>
+<h5 id="khắc-phục-sự-cố-ứng-dụng-sau-khi-thay-thế-mã-nguồn">Khắc phục sự cố ứng dụng sau khi thay thế mã nguồn.</h5>
+<p>Việc khởi tạo thành công, tuy nhiên bạn không thể truy cập ứng dụng của mình. Làm theo các bước sau để điều tra và giải quyết vấn đề.
+4. Kiểm tra CodeStar Pipeline xem có lỗi nào hay không
+<img src="../../../images/3/34.png?width=90pc" alt="Pipeline">
+5. Kiểm tra phần Deploy và chọn ExecuteChangeSet Details
+6. Kiểm tra tại ElasticBeanstalk 
+7. Xem logs của ứng dụng <strong>travelbuddy</strong></p>
+<pre><code>23-Sep-2020 06:16:13.732 SEVERE [localhost-startStop-1] org.apache.tomcat.jdbc.pool.ConnectionPool.init Unable to create initial connections of pool.
+	com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+		at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+</code></pre><p>Dường như ứng dụng không được phép kết nối tới Database.
+Để ứng dụng có thể giao tiếp được với Database, ta cần thêm SecurotyGroup từ ElasticBeanstalk Enviroment tới SecurityGroup từ RDS.</p>
+<ol>
+<li>Truy cập EC2 và chọn Security Groups
+![SecurityGroup]](../../../images/3/35.png?width=90pc)</li>
+<li>Chọn <strong>DBSecurityGroup</strong> và chọn tab <strong>Inbound rules</strong></li>
+<li>Chọn <strong>Edit inbound rules</strong>
+<img src="../../../images/3/36.png?width=90pc" alt="SecurityGroup"></li>
+<li>Chọn dịch vụ MySQL/Aurora và chọn SecurityGroup ID từ travelbuddyapp. Chọn <strong>Save rules</strong>
+<img src="../../../images/3/37.png?width=90pc" alt="SecurityGroup"></li>
+<li>Kiểm tra lại ứng dụng và thấy rằng có thể truy cập được ứng dụng một cách bình thường.</li>
+</ol>
 
 
 
@@ -1347,19 +1430,19 @@ Chỉnh sửa <strong>pip install awscli &ndash;upgrade &ndash;user</strong> san
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1619162456"></script>
-    <script src="/js/perfect-scrollbar.min.js?1619162456"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1619162456"></script>
-    <script src="/js/jquery.sticky.js?1619162456"></script>
-    <script src="/js/featherlight.min.js?1619162456"></script>
-    <script src="/js/highlight.pack.js?1619162456"></script>
+    <script src="/js/clipboard.min.js?1619162648"></script>
+    <script src="/js/perfect-scrollbar.min.js?1619162648"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1619162648"></script>
+    <script src="/js/jquery.sticky.js?1619162648"></script>
+    <script src="/js/featherlight.min.js?1619162648"></script>
+    <script src="/js/highlight.pack.js?1619162648"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1619162456"></script>
-    <script src="/js/learn.js?1619162456"></script>
-    <script src="/js/hugo-learn.js?1619162456"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1619162648"></script>
+    <script src="/js/learn.js?1619162648"></script>
+    <script src="/js/hugo-learn.js?1619162648"></script>
 
-    <link href="/mermaid/mermaid.css?1619162456" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1619162456"></script>
+    <link href="/mermaid/mermaid.css?1619162648" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1619162648"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -217,20 +217,6 @@
   </url>
   
   <url>
-    <loc>/vi/3-automate-application-deployment/3-problem-determination/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/3-automate-application-deployment/3-problem-determination/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/3-automate-application-deployment/3-problem-determination/"
-                />
-  </url>
-  
-  <url>
     <loc>/vi/4-deploy-windows-service/3-create-deployment-s3-bucket/</loc>
     <xhtml:link
                 rel="alternate"
@@ -241,6 +227,20 @@
                 rel="alternate"
                 hreflang="vi"
                 href="/vi/4-deploy-windows-service/3-create-deployment-s3-bucket/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/3-automate-application-deployment/3-problem-determination/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/3-automate-application-deployment/3-problem-determination/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/3-automate-application-deployment/3-problem-determination/"
                 />
   </url>
   

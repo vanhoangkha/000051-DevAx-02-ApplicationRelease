@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Python 2.7 EOS on DevAx - Chuyển đổi Monoliths sang Microservices - Chuyển đổi Ứng dụng Monolith</title>
+    <title>Xác định lỗi on DevAx - Chuyển đổi Monoliths sang Microservices - Chuyển đổi Ứng dụng Monolith</title>
     <link>/vi/3-automate-application-deployment/3-problem-determination/</link>
-    <description>Recent content in Python 2.7 EOS on DevAx - Chuyển đổi Monoliths sang Microservices - Chuyển đổi Ứng dụng Monolith</description>
+    <description>Recent content in Xác định lỗi on DevAx - Chuyển đổi Monoliths sang Microservices - Chuyển đổi Ứng dụng Monolith</description>
     <generator>Hugo -- gohugo.io</generator>
     
 	<atom:link href="/vi/3-automate-application-deployment/3-problem-determination/index.xml" rel="self" type="application/rss+xml" />
