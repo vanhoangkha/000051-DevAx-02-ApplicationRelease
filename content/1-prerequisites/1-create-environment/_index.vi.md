@@ -25,6 +25,4 @@ Trong bài thực hành này, chúng ta sẽ sử dụng CloudFormation template
 ![CloudFormation](../../../images/1/5.png?width=90pc)
 13.  Chọn **Create stack**
 ![CloudFormation](../../../images/1/6.png?width=90pc)
-14. Chúng ta cần chờ một vài phút để các tài nguyên được khởi tạo và cấu hình.
-
-![Diagram](../../../images/1/0.png?width=90pc)
+14. Chúng ta cần chờ khoảng hơn 30 phút để các tài nguyên được khởi tạo và cấu hình.

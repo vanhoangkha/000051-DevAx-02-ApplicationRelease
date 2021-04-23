@@ -203,16 +203,16 @@
   </url>
   
   <url>
-    <loc>/vi/4-deploy-windows-service/3-create-deployment-s3-bucket/</loc>
+    <loc>/vi/3-automate-application-deployment/3-problem-determination/3-python27/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-deploy-windows-service/3-create-deployment-s3-bucket/"
+                href="/3-automate-application-deployment/3-problem-determination/3-python27/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-deploy-windows-service/3-create-deployment-s3-bucket/"
+                href="/vi/3-automate-application-deployment/3-problem-determination/3-python27/"
                 />
   </url>
   
@@ -227,6 +227,20 @@
                 rel="alternate"
                 hreflang="vi"
                 href="/vi/3-automate-application-deployment/3-problem-determination/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/4-deploy-windows-service/3-create-deployment-s3-bucket/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/4-deploy-windows-service/3-create-deployment-s3-bucket/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/4-deploy-windows-service/3-create-deployment-s3-bucket/"
                 />
   </url>
   

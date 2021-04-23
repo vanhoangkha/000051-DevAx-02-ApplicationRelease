@@ -51,11 +51,6 @@ Trong bài thực hành này, bạn sẽ kết nối Eclipse IDE tới AWS CodeC
 IDE sẽ lấy các tập tin từ kho lưu trữ CodeCommit và chuẩn bị để bạn có thể bắt đầu viết mã nguồn. Có thể có lỗi xảy ra với mã nguồn vừa tải xuống này, tuy nhiên bạn có thể bỏ qua nó vì bạn sẽ không sử dụng mã này ngoài việc kiểm tra nó trong bước tiếp theo.
 24.  Hãy dành chút thời gian để xem cấu trúc project trước khi bạn có thể tiếp tục. Ứng dụng mẫu Hello World này trình bày một trang web cho người dùng và kết nối với một Spring controller chuẩn.
 ![ConnectIDE](../../../images/2/44.png?width=90pc)
-Trong khi bạn thiết lập môi trường CodeStar của mình trong IDE, project của bạn sẽ được tự động triển khai - một pipeline phân phối sẽ được thiết lập và ứng dụng mẫu được triển khai trên môi trường Elastic Beanstalk PaaS. Quá trình này sẽ mất vài phút để có thể đã hoàn tất.
 
-Sau khi bạn đã xem qua đoạn mã trong IDE, hãy quay lại bảng điều khiển AWS CodeStar và kiểm tra tiến trình triển khai. Ở góc trên cùng bên phải, hãy đợi cho đến khi bạn thấy **Provisioning 100% complete** rồi nhấp vào **Skip**.
-
-Ở bên phải của trang dự án, bạn sẽ thấy bảng **Continuous Deployment panel** . Kiểm tra để đảm bảo rằng việc triển khai Elastic Beanstalk đã thành công, để xác nhận rằng việc triển khai ban đầu của ứng dụng mẫu đã hoàn tất. Nếu hoàn tất, hãy nhấp vào liên kết **View application** để truy cập trang web.
-Nếu triển khai thành công, bạn sẽ thấy một trang web tương tự như sau:
-
-Như vậy, bạn vừa triển khai thành công một CI/CD automation pipeline hoàn chỉnh.
+Vậy là bạn đã hoàn thành việc kết nối và pull source code từ code commit về máy của developer.
+Ở bước tiếp theo chúng ta sẽ thay đổi code và release phiên bản mới của ứng dụng lên Elastic Beanstalk.

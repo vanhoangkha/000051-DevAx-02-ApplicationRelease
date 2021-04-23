@@ -5,15 +5,15 @@ chapter = false
 pre = "<b>3.3.1 </b>"
 +++
 
-##### Cập nhật cấu hình ebextensions 
+#### Cập nhật cấu hình ebextensions chuyển sang sử dụng python 3
 
 Do hiện tại Elastic Beanstalk sử dụng Python 3 nên chúng ta sẽ cần cập nhật lại cấu hình trong thư mục .ebextensions
 nằm trong Project của chúng ta.
 
 Cập nhật nội dung  file **sshd.config** như hướng dẫn bên dưới.
-Chỉnh sửa **python27-devel** sang **python3-devel**
-Chỉnh sửa **python27-pip** sang **python3-pip**
-Chỉnh sửa **/etc/init.d/sshd restart** sang **sudo service sshd restart**
++ Chỉnh sửa **python27-devel** sang **python3-devel**
++ Chỉnh sửa **python27-pip** sang **python3-pip**
++ Chỉnh sửa **/etc/init.d/sshd restart** sang **sudo service sshd restart**
 
 ```
 packages:
@@ -41,7 +41,7 @@ commands:
 
 
 Cập nhật nội dung  file **set-instance-credit-unlimited** như hướng dẫn bên dưới.
-Chỉnh sửa **pip install awscli --upgrade --user** sang **pip3 install awscli --upgrade --user**
++ Chỉnh sửa **pip install awscli --upgrade --user** sang **pip3 install awscli --upgrade --user**
 
 ```
 commands:
