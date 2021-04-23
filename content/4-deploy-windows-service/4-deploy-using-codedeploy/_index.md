@@ -8,6 +8,9 @@ pre = "<b>4.4. </b>"
 #### Tải xuống Heartbeat Windows Service mẫu
 
 1. Nhấp chuột phải và lưu tập tin **CodeDeployHeartbeatDemo.zip**. Giải nén tập tin.
+
+{{%attachments /%}}
+
 Hãy dành một chút thời gian để kiểm tra nội dung của tệp **appspec.yml**. Nó có các nội dung sau:
 ```
 os: windows
