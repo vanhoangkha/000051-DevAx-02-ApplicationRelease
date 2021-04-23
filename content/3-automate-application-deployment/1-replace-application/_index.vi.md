@@ -39,8 +39,9 @@ Bạn cũng có thể lấy thông số này từ cloudformation stack trong m�
 
 - Nhập *git status* để xem các thay đổi của tập tin mã nguồn.
 ![CreateNewBranch](../../../images/3/8.png?width=90pc)
-- Nhập *git config --global user.email "you@example.com"*.
-- Nhập *git add .* để thêm các tập tin đã thay đổi.
+- Nhập *git config --global user.email "you@example.com"*
+- Nhap *git config --global user.name awsstudent
+- Nhập *git add .* để thêm các tập tin đã thay đổi
 - Nhập *git commit -m "Baseline implementation"* để commit các thay đổi.
 ![CreateNewBranch](../../../images/3/9.png?width=90pc)
 - Nhập *git checkout master* để chuyển tới nhánh master.
@@ -99,3 +100,5 @@ aws s3 mb s3://cachingbucket-<YOURNAME-NO-SPACES>
 25. Chọn bucket bạn đã tạo ở trên.\
 26. Sau khi triển khai hoàn tất, chọn **Application Endpoint** tại trang CodeStar dashboard. Bạn sẽ thấy website TravelBuddy được triển khai trên môi trường Elastic Beanstalk.
 ![ReplaceApplication](../../../images/3/25.png?width=90pc)
+
+
