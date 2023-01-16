@@ -1,17 +1,17 @@
 +++
-title = "Triển khai ứng dụng sử dụng CodeDeploy"
+title = "Deploy application using CodeDeploy"
 weight = 4
 chapter = false
 pre = "<b>4.4. </b>"
 +++
 
-#### Tải xuống Heartbeat Windows Service mẫu
+#### Download sample Heartbeat Windows Service
 
-1. Nhấp chuột phải và lưu tập tin **CodeDeployHeartbeatDemo.zip**. Giải nén tập tin.
+1. Right-click and save the file **CodeDeployHeartbeatDemo.zip**. Unzip the file.
 
 {{%attachments /%}}
 
-Hãy dành một chút thời gian để kiểm tra nội dung của tệp **appspec.yml**. Nó có các nội dung sau:
+Please take a moment to examine the contents of the **appspec.yml** file. It has the following contents:
 ```
 os: windows
 files:
@@ -39,23 +39,27 @@ hooks:
       timeout: 30
 
 ```
-Tệp appspec.yml phác thảo từng tập tin nguồn có trong tập tin nén ZIP vừa giải nén và chỉ định đích trên máy ảo EC2 đích nơi tập tin sẽ được lưu trữ. Việc triển khai này chỉ sử dụng hai lifecycle hooks - ApplicationStop và AfterInstall nhưng bạn có thể sử dụng nhiều hơn nếu trường hợp của bạn yêu cầu. Trong trường hợp này, các tập lệnh powershell (cũng được bao gồm trong kho lưu trữ tệp ZIP) được sử dụng để dừng dịch vụ Windows và hủy đăng ký dịch vụ (nếu nó đã được cài đặt) và sau đó sau khi tất cả các tệp được sao chép, để đăng ký dịch vụ và khởi động nó, và cũng di chuyển trình trợ giúp *wintail* vào vị trí để hỗ trợ xem tệp nhật ký.
 
-#### Đẩy gói triển khai lên S3 sẵn sàng để triển khai bởi CodeDeploy
-Chúng ta đã sẵn sàng để triển khai dịch vụ Heartbeat tới EC2 instance. Chúng ta có các tập tin triển khai trong máy và cần đóng gói chúng lại và đẩy chúng lên S3. Công cụ AWS CLI CodeDeploy sẽ giúp chúng ta hiện việc này.
+The appspec.yaml file outlines each source file contained in the unzipped ZIP archive and specifies the destination on the destination EC2 virtual machine where the files will be stored. This implementation uses only two lifecycle hooks - ApplicationStop and AfterInstall but you can use more if your case requires it. In this case, the powershell scripts (also included in the ZIP file archive) are used to stop the Window service and unregister the service (if it is already installed) and then after all files are copied, to register the service and start it, and also move the *wintail* helper in place to assist in viewing log files.
 
-2. Trong terminal, *cd* tới thư mục giải nén **CodeDeployHeartbeatDemo**. 
-3. Dùng các lệnh sau để đóng gói các tập tin và đẩy chúng lên S3.
+#### Push deployment packages to S3 ready to deploy by CodeDeploy
+We are now ready to deploy the Heartbeat service to the EC2 instance. We have the deployment files on our machine and need to package them up and push them to S3. The AWS CLI CodeDeploy tool will help us do this.
+
+2. In terminal, run `cd CodeDeployHeartbeatDemo` command. 
+3. Use the following commands to pack files and push them to S3.
 ```bash
-aws deploy push --application-name idevelopDemo --source CodeDeployHeartbeatDemo --profile aws-lab-env --s3-location s3://idevelop-codedeployartefacts-<yourinitials>/CodeDeployHeartbeatDemo.zip 
+aws deploy push --application-name idevelopDemo --source CodeDeployHeartbeatDemo --profile default --s3-location s3://idevelop-codedeployartefacts-<yourinitials>/CodeDeployHeartbeatDemo.zip 
 ```
-Thay <yourinitials> bằng tên của bạn giống như tên của bucket đã tạo ở bước trước.
-Nếu thành công, CLI sẽ trả về kết quả *To deploy with this revision, run:…*, nhưng bạn không nên sử dụng dòng lệnh này, thay vào đó hãy sử dụng câu lệnh được cung cấp ở bước sau.
-![UsingCodeDeploy](../../../images/4/18.png?width=90pc)
-4.  Nhập các lệnh sau vào terminal
+Replace <yourinitials> with your name the same as the name of the bucket created in the previous step.
+If successful, CLI will return *To deploy with this revision, run:…*, but you should not use this command line, instead use the command provided in the following step.
+
+![UsingCodeDeploy](/images/4/18.png?width=90pc)
+
+4.  Enter the following command to terminal.
 ```bash
 aws deploy create-deployment --application-name idevelopDemo --deployment-group-name HeartbeatInstances --deployment-config-name CodeDeployDefault.OneAtATime --description "Initial Deployment" --s3-location bucket=idevelop-codedeployartefacts-<yourinitials>,key=CodeDeployHeartbeatDemo.zip,bundleType=zip
 ```
-Thay <yourinitials> bằng tên của bạn giống như tên của bucket đã tạo ở bước trước.
-Nếu thành công, CLI sẽ trả về **deploymentId**
-![UsingCodeDeploy](../../../images/4/19.png?width=90pc)
+Replace <yourinitials> with your name the same as the name of the bucket created in the previous step.
+If successful, CLI will return **deploymentId**
+
+![UsingCodeDeploy](/images/4/19.png?width=90pc)

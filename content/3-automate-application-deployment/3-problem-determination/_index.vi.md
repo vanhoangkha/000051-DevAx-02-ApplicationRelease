@@ -5,7 +5,7 @@ chapter = false
 pre = "<b>3.3. </b>"
 +++
 
-##### Kiểm tra tập tun buildspec.yml
+##### Kiểm tra tập tin buildspec.yml
 Tập tin **buildspec.yml** là một phần quan trọng mà bạn cần phải đảm bảo tính chính xác của tập tin này. Tập tin này sẽ chạy qua các giai đoạn mà bạn có thể thấy trong bảng điều khiển bên dưới CodeBuild trong log của nó. 
 Tập tin này được chia thành nhiều phần nhỏ
 
@@ -49,7 +49,9 @@ artifacts:
 2. Kiểm tra bảng điều khiển **CodeBuild** 
 Kiểm tra bảng điều khiển CodeBuild và xem có lỗi nào xuất hiện trong quá trình triển khai hay không.
 Nếu có, chọn xem chi tiết để biết lỗi xảy ra là gì.
-![Error](../../../images/3/31.png?width=90pc)
+
+![Error](/images/3/31.png?width=90pc)
+
 Truy cập Buildlog tab và cuộn xuống phần log báo lỗi.
 Trong ví dụ này, bạn có thể thấy địa chỉ truy cập của root trong tập tin template.yml không chính xác.
 ```
@@ -82,9 +84,13 @@ EBApplicationVersion:
 ```
 3. Cập nhật Elastic beanstalk có thành công hay không? 
 Truy cập Elastic beanstalk, vào ứng dụng travelbuddy và chọn Request Logs.
-![RequestLogs](../../../images/3/32.png?width=90pc)
+
+![RequestLogs](/images/3/32.png?width=90pc)
+
 Ở đây có 2 loại log là Last 100 Lines và Full Logs. Chọn loại phù hợp và tải về. 
-![RequestLogs](../../../images/3/33.png?width=90pc)
+
+![RequestLogs](/images/3/33.png?width=90pc)
+
 Kiểm tra các tập tin log đã tải về để xem tại sao máy chủ lại không khởi động được.
 Dưới đây là một vài vấn đề ví dụ:
 - Ví dụ về việc giao tiếp giữa client và RDS server không hoạt động
@@ -112,29 +118,4 @@ java.sql.SQLSyntaxErrorException: Table 'travelbuddy.flightspecial' doesn't exis
 	sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 ```
-Để khắc phục lỗi này, đăng nhập vào mysql và truy cập vào database, thực hiện lại các phần tạo databse đã hướng dẫn ở bài lab đầu tiên.
-
-##### Khắc phục sự cố ứng dụng sau khi thay thế mã nguồn.
-Việc khởi tạo thành công, tuy nhiên bạn không thể truy cập ứng dụng của mình. Làm theo các bước sau để điều tra và giải quyết vấn đề.
-4. Kiểm tra CodeStar Pipeline xem có lỗi nào hay không
-![Pipeline](../../../images/3/34.png?width=90pc)
-5. Kiểm tra phần Deploy và chọn ExecuteChangeSet Details
-6. Kiểm tra tại ElasticBeanstalk 
-7. Xem logs của ứng dụng **travelbuddy**
-```
-23-Sep-2020 06:16:13.732 SEVERE [localhost-startStop-1] org.apache.tomcat.jdbc.pool.ConnectionPool.init Unable to create initial connections of pool.
-	com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-		at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
-```
-Dường như ứng dụng không được phép kết nối tới Database.
-Để ứng dụng có thể giao tiếp được với Database, ta cần thêm SecurotyGroup từ ElasticBeanstalk Enviroment tới SecurityGroup từ RDS.
-1. Truy cập EC2 và chọn Security Groups
-![SecurityGroup]](../../../images/3/35.png?width=90pc)
-2. Chọn **DBSecurityGroup** và chọn tab **Inbound rules**
-3. Chọn **Edit inbound rules**
-![SecurityGroup](../../../images/3/36.png?width=90pc)
-4. Chọn dịch vụ MySQL/Aurora và chọn SecurityGroup ID từ travelbuddyapp. Chọn **Save rules**
-![SecurityGroup](../../../images/3/37.png?width=90pc)
-5. Kiểm tra lại ứng dụng và thấy rằng có thể truy cập được ứng dụng một cách bình thường.
+Để khắc phục lỗi này, đăng nhập vào mysql và truy cập vào database, thực hiện lại các phần tạo database đã hướng dẫn ở bài lab đầu tiên.

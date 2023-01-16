@@ -3,30 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.101.0" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Thiết lập một AWS CodeStar project  :: DevAx - Monoliths to Microservices - Migrating the Monolith</title>
+    <title>Configure AWS CodeStar project :: DevAx - Monoliths to Microservices - Migrating the Monolith</title>
 
     
-    <link href="/css/nucleus.css?1624844736" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1624844736" rel="stylesheet">
-    <link href="/css/hybrid.css?1624844736" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1624844736" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1624844736" rel="stylesheet">
-    <link href="/css/auto-complete.css?1624844736" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1624844736" rel="stylesheet">
-    <link href="/css/theme.css?1624844736" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1624844736" rel="stylesheet">
+    <link href="/css/nucleus.css?1673836861" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1673836861" rel="stylesheet">
+    <link href="/css/hybrid.css?1673836861" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1673836861" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1673836861" rel="stylesheet">
+    <link href="/css/auto-complete.css?1673836861" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1673836861" rel="stylesheet">
+    <link href="/css/theme.css?1673836861" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1673836861" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1624844736" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1673836861" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1624844736"></script>
+    <script src="/js/jquery-3.3.1.min.js?1673836861"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1624844736"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1624844736"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1673836861"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1673836861"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1624844736"></script>
+<script type="text/javascript" src="/js/search.js?1673836861"></script>
 
     
   </div>
@@ -82,13 +82,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisites/" title="Chuẩn bị" class="dd-item 
+    <li data-nav-id="/1-prerequisites/" title="Preparation" class="dd-item 
         
         
         
         ">
       <a href="/1-prerequisites/">
-          <b>1. </b>Chuẩn bị
+          <b>1. </b>Preparation
           
             <i class="fas fa-check read-icon"></i>
           
@@ -113,13 +113,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisites/1-create-environment/" title="Chuẩn bị môi trường" class="dd-item 
+    <li data-nav-id="/1-prerequisites/1-create-environment/" title="Prepare Environment" class="dd-item 
         
         
         
         ">
       <a href="/1-prerequisites/1-create-environment/">
-          <b>1.1. </b>Chuẩn bị môi trường
+          <b>1.1. </b>Prepare Environment
           
             <i class="fas fa-check read-icon"></i>
           
@@ -148,13 +148,13 @@
  
   
     
-    <li data-nav-id="/2-configure-release-automation/" title="Cấu hình phát hành tự động" class="dd-item 
+    <li data-nav-id="/2-configure-release-automation/" title="Configure automatic release" class="dd-item 
         parent
         
         
         ">
       <a href="/2-configure-release-automation/">
-          <b>2. </b>Cấu hình phát hành tự động
+          <b>2. </b>Configure automatic release
           
             <i class="fas fa-check read-icon"></i>
           
@@ -179,13 +179,13 @@
  
   
     
-    <li data-nav-id="/2-configure-release-automation/1-setup-codestar-project/" title="Thiết lập một AWS CodeStar project " class="dd-item 
+    <li data-nav-id="/2-configure-release-automation/1-setup-codestar-project/" title="Configure AWS CodeStar project" class="dd-item 
         
         active
         
         ">
       <a href="/2-configure-release-automation/1-setup-codestar-project/">
-          <b>2.1. </b>Thiết lập một AWS CodeStar project 
+          <b>2.1. </b>Configure AWS CodeStar project
           
             <i class="fas fa-check read-icon"></i>
           
@@ -207,13 +207,13 @@
  
   
     
-    <li data-nav-id="/2-configure-release-automation/2-connect-to-codecommit/" title="Kết nối Eclipse IDE với AWS Codecommit" class="dd-item 
+    <li data-nav-id="/2-configure-release-automation/2-connect-to-codecommit/" title="Connect to Eclipse IDE with AWS Codecommit" class="dd-item 
         
         
         
         ">
       <a href="/2-configure-release-automation/2-connect-to-codecommit/">
-          <b>2.2. </b>Kết nối Eclipse IDE với AWS Codecommit
+          <b>2.2. </b>Connect to Eclipse IDE with AWS Codecommit
           
             <i class="fas fa-check read-icon"></i>
           
@@ -242,13 +242,13 @@
  
   
     
-    <li data-nav-id="/3-automate-application-deployment/" title="Triển khai ứng dụng" class="dd-item 
+    <li data-nav-id="/3-automate-application-deployment/" title="Application Deployment" class="dd-item 
         
         
         
         ">
       <a href="/3-automate-application-deployment/">
-          <b>3. </b>Triển khai ứng dụng
+          <b>3. </b>Application Deployment
           
             <i class="fas fa-check read-icon"></i>
           
@@ -273,13 +273,13 @@
  
   
     
-    <li data-nav-id="/3-automate-application-deployment/1-replace-application/" title="Thay thế ứng dụng mẫu" class="dd-item 
+    <li data-nav-id="/3-automate-application-deployment/1-replace-application/" title="Replace sample application" class="dd-item 
         
         
         
         ">
       <a href="/3-automate-application-deployment/1-replace-application/">
-          <b>3.1. </b>Thay thế ứng dụng mẫu
+          <b>3.1. </b>Replace sample application
           
             <i class="fas fa-check read-icon"></i>
           
@@ -301,13 +301,13 @@
  
   
     
-    <li data-nav-id="/3-automate-application-deployment/2-challenge-deploy-through-pipeline/" title="Challenge - Triển khai thông qua Pipeline" class="dd-item 
+    <li data-nav-id="/3-automate-application-deployment/2-challenge-deploy-through-pipeline/" title="Challenge - Deployment via Pipeline" class="dd-item 
         
         
         
         ">
       <a href="/3-automate-application-deployment/2-challenge-deploy-through-pipeline/">
-          <b>3.2. </b>Challenge - Triển khai thông qua Pipeline
+          <b>3.2. </b>Challenge - Deployment via Pipeline
           
             <i class="fas fa-check read-icon"></i>
           
@@ -329,58 +329,18 @@
  
   
     
-    <li data-nav-id="/3-automate-application-deployment/3-problem-determination/" title="Xác định lỗi" class="dd-item 
+    <li data-nav-id="/3-automate-application-deployment/3-problem-determination/" title="Determine error" class="dd-item 
         
         
         
         ">
       <a href="/3-automate-application-deployment/3-problem-determination/">
-          <b>3.3. </b>Xác định lỗi
+          <b>3.3. </b>Determine error
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/3-automate-application-deployment/3-problem-determination/3-python27/" title="Python 2.7 EOS" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/3-automate-application-deployment/3-problem-determination/3-python27/">
-          <b>3.3.1 </b>Python 2.7 EOS
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
               
     </li>
   
@@ -435,13 +395,13 @@
  
   
     
-    <li data-nav-id="/4-deploy-windows-service/1-create-ec2-instance/" title="Tạo máy ảo EC2" class="dd-item 
+    <li data-nav-id="/4-deploy-windows-service/1-create-ec2-instance/" title="Create EC2 instance" class="dd-item 
         
         
         
         ">
       <a href="/4-deploy-windows-service/1-create-ec2-instance/">
-          <b>4.1. </b>Tạo máy ảo EC2
+          <b>4.1. </b>Create EC2 instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -463,13 +423,13 @@
  
   
     
-    <li data-nav-id="/4-deploy-windows-service/2-create-code-deploy-application/" title="Tạo ứng dụng CodeDeploy và Deployment Group" class="dd-item 
+    <li data-nav-id="/4-deploy-windows-service/2-create-code-deploy-application/" title="Create CodeDeploy application and Deployment Group" class="dd-item 
         
         
         
         ">
       <a href="/4-deploy-windows-service/2-create-code-deploy-application/">
-          <b>4.1. </b>Tạo ứng dụng CodeDeploy và Deployment Group
+          <b>4.2. </b>Create CodeDeploy application and Deployment Group
           
             <i class="fas fa-check read-icon"></i>
           
@@ -491,13 +451,13 @@
  
   
     
-    <li data-nav-id="/4-deploy-windows-service/3-create-deployment-s3-bucket/" title="Tạo Triển khai S3 Bucket" class="dd-item 
+    <li data-nav-id="/4-deploy-windows-service/3-create-deployment-s3-bucket/" title="Create S3 Bucket Deployment" class="dd-item 
         
         
         
         ">
       <a href="/4-deploy-windows-service/3-create-deployment-s3-bucket/">
-          <b>4.3. </b>Tạo Triển khai S3 Bucket
+          <b>4.3. </b>Create S3 Bucket Deployment
           
             <i class="fas fa-check read-icon"></i>
           
@@ -519,13 +479,13 @@
  
   
     
-    <li data-nav-id="/4-deploy-windows-service/4-deploy-using-codedeploy/" title="Triển khai ứng dụng sử dụng CodeDeploy" class="dd-item 
+    <li data-nav-id="/4-deploy-windows-service/4-deploy-using-codedeploy/" title="Deploy application using CodeDeploy" class="dd-item 
         
         
         
         ">
       <a href="/4-deploy-windows-service/4-deploy-using-codedeploy/">
-          <b>4.4. </b>Triển khai ứng dụng sử dụng CodeDeploy
+          <b>4.4. </b>Deploy application using CodeDeploy
           
             <i class="fas fa-check read-icon"></i>
           
@@ -554,13 +514,13 @@
  
   
     
-    <li data-nav-id="/5-monitor-service/" title="Giám sát dịch vụ của bạn" class="dd-item 
+    <li data-nav-id="/5-monitor-service/" title="Monitor your service" class="dd-item 
         
         
         
         ">
       <a href="/5-monitor-service/">
-          <b>5. </b>Giám sát dịch vụ của bạn
+          <b>5. </b>Monitor your service
           
             <i class="fas fa-check read-icon"></i>
           
@@ -585,13 +545,13 @@
  
   
     
-    <li data-nav-id="/5-monitor-service/1-monitor-service/" title="Sử dụng Eclipse IDE" class="dd-item 
+    <li data-nav-id="/5-monitor-service/1-monitor-service/" title="Using Eclipse IDE" class="dd-item 
         
         
         
         ">
       <a href="/5-monitor-service/1-monitor-service/">
-          <b>5.1. </b>Sử dụng Eclipse IDE
+          <b>5.1. </b>Using Eclipse IDE
           
             <i class="fas fa-check read-icon"></i>
           
@@ -613,13 +573,13 @@
  
   
     
-    <li data-nav-id="/5-monitor-service/2-optional-confirm-codedeploy-agent/" title="(Optional) Xác nhận cài đặt CodeDeploy agent " class="dd-item 
+    <li data-nav-id="/5-monitor-service/2-optional-confirm-codedeploy-agent/" title="(Optional) Confirm installation of CodeDeploy agent" class="dd-item 
         
         
         
         ">
       <a href="/5-monitor-service/2-optional-confirm-codedeploy-agent/">
-          <b>5.2. </b>(Optional) Xác nhận cài đặt CodeDeploy agent 
+          <b>5.2. </b>(Optional) Confirm installation of CodeDeploy agent
           
             <i class="fas fa-check read-icon"></i>
           
@@ -641,13 +601,13 @@
  
   
     
-    <li data-nav-id="/5-monitor-service/3-optional-use-sdk-query-elastic-beanstalk/" title="(Optional) Sử dụng SDK để truy vấn Elastic Beanstalk" class="dd-item 
+    <li data-nav-id="/5-monitor-service/3-optional-use-sdk-query-elastic-beanstalk/" title="(Optional) Using the SDK to query Elastic Beanstalk" class="dd-item 
         
         
         
         ">
       <a href="/5-monitor-service/3-optional-use-sdk-query-elastic-beanstalk/">
-          <b>5.3. </b>(Optional) Sử dụng SDK để truy vấn Elastic Beanstalk
+          <b>5.3. </b>(Optional) Using the SDK to query Elastic Beanstalk
           
             <i class="fas fa-check read-icon"></i>
           
@@ -676,13 +636,13 @@
  
   
     
-    <li data-nav-id="/6-challenge/" title="Thử thách" class="dd-item 
+    <li data-nav-id="/6-challenge/" title="Challenge" class="dd-item 
         
         
         
         ">
       <a href="/6-challenge/">
-          <b>6. </b>Thử thách
+          <b>6. </b>Challenge
           
             <i class="fas fa-check read-icon"></i>
           
@@ -702,13 +662,13 @@
  
   
     
-    <li data-nav-id="/7-conclustion/" title="Kết luận" class="dd-item 
+    <li data-nav-id="/7-conclustion/" title="Conclusion" class="dd-item 
         
         
         
         ">
       <a href="/7-conclustion/">
-          <b>7. </b>Kết luận
+          <b>7. </b>Conclusion
           
             <i class="fas fa-check read-icon"></i>
           
@@ -807,6 +767,21 @@
     <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
      
 </left>
+<left>
+    <br>
+    <br>
+        <b> Last Updated </b> <br>
+        <i><font color=orange>15-01-2023</font></i>
+    </left>
+    <left>
+        <br>
+        <br>
+            <b> Team </b> <br>
+           
+            <i>
+                <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng</a>
+        </i>
+        </left>
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
@@ -848,7 +823,7 @@
             
           
           
-            <a href='/'>Cấu hình tự động phát hành ứng dụng</a> > <a href='/2-configure-release-automation/'>Cấu hình phát hành tự động</a> > Thiết lập một AWS CodeStar project 
+            <a href='/'>Configure app auto-release</a> > <a href='/2-configure-release-automation/'>Configure automatic release</a> > Configure AWS CodeStar project
           
         
           
@@ -885,7 +860,7 @@
           
             <h1>
               
-              Thiết lập một AWS CodeStar project 
+              Configure AWS CodeStar project
             </h1>
           
 
@@ -893,153 +868,141 @@
 
 
 
-	<h4 id="thiết-lập-một-aws-codestar-project">Thiết lập một AWS CodeStar project</h4>
+	<h4 id="setting-up-an-aws-codestar-project">Setting up an AWS CodeStar project</h4>
 <ol>
-<li>Truy cập AWS VPC dashboard. Chọn <strong>VPCs</strong>
-<img src="../../../images/2/1.png?width=90pc" alt="VPC"></li>
-<li>Bạn sẽ thấy có một VPC có tên <strong>Module2/DevAxNetworkVPC</strong>.
-<img src="../../../images/2/2.png?width=90pc" alt="VPC"></li>
-<li>Chọn <strong>Subnets</strong> ở menu bên trái và lọc theo VPC ID của VPC <strong>Module2/DevAxNetworkVPC</strong>
-<img src="../../../images/2/3.png?width=90pc" alt="VPC"></li>
-<li>Bạn sẽ thấy 4 subnet - 2 private và 2 public.</li>
-<li>Truy cập CodeStar dashboard. 
-<img src="../../../images/2/4.png?width=90pc" alt="NewProjectCodeStar"></li>
-<li>Chọn <strong>Create project</strong>. Bạn sẽ thấy nhiều thẻ mẫu project.
-<img src="../../../images/2/5.png?width=90pc" alt="NewProjectCodeStar">
-
-<div class="notices warning" ><p>Nếu bạn thấy một thông báo liên quan vai trò dịch vụ bị thiếu. Chọn <strong>Create service role</strong></p>
-</div>
-</li>
-<li>Vì monolith của chúng ta được viết bằng ngôn ngữ lập trình Java và chúng ta sẽ triển khai một ứng dụng, trong bảng tìm kiếm, hãy chọn các tùy chọn:</li>
+<li>Access to AWS VPC dashboard.</li>
 </ol>
+<p><img src="/images/2/1.png?width=90pc" alt="VPC"></p>
+<ol start="2">
+<li>Select <strong>Your VPCs</strong>. We should see a VPC named <strong>Module2/DevAxNetworkVPC</strong>.</li>
+</ol>
+<p><img src="/images/2/2.png?width=90pc" alt="VPC"></p>
+<ol start="3">
+<li>Select <strong>Subnets</strong> on the left menu và filter by VPC ID of <strong>Module2/DevAxNetworkVPC</strong> VPC ở menu bên trái và lọc theo VPC ID của VPC <strong>Module2/DevAxNetworkVPC</strong>. We should see 4 subnets - 2 privates and 2 public.</li>
+</ol>
+<p><img src="/images/2/3.png?width=90pc" alt="VPC"></p>
+<ol start="4">
+<li>Open CodeStar dashboard. Select <strong>Create project</strong>.</li>
+</ol>
+<p><img src="/images/2/4.png?width=90pc" alt="NewProjectCodeStar"></p>
+<ol start="5">
+<li>We should see many project template.</li>
+</ol>
+<p><img src="/images/2/5.png?width=90pc" alt="NewProjectCodeStar"></p>
+<p>
+<div class="notices warning" ><p>If you see a message related to the missing service role. Select <strong>Create service role</strong></p>
+</div>
+
+6. Cause our monolith is written by Java and we are going to deploy an application, in the search panel, select the options:</p>
 <ul>
 <li>AWS Elastic Beanstalk</li>
 <li>Web Application</li>
-<li>Java
-<img src="../../../images/2/6.png?width=90pc" alt="NewProjectCodeStar">
-Thao tác này sẽ liệt kê các thẻ mẫu phù hợp với yêu cầu - chọn thẻ <em>Java Spring - Web Application</em></li>
+<li>Java</li>
 </ul>
-<ol start="8">
-<li>
-<p>Trong trang tiếp theo, nhập <strong>TravelBuddy</strong> cho mục <strong>Project name</strong>.</p>
-</li>
-<li>
-<p>Với mục repository, đảm bảo rằng <strong>CodeCommit</strong> đã được chọn và tên repository (<strong>Travel Buddy</strong>) được tự động điền.
-<img src="../../../images/2/7.png?width=90pc" alt="NewProjectCodeStar"></p>
-</li>
-<li>
-<p>Trong mục <strong>EC2 Configuration</strong>, chọn Instance Type là <strong>t3.medium</strong></p>
-</li>
-<li>
-<p>Chọn <strong>vpc</strong> đúng với tên VPC của bài thực hành.</p>
-</li>
-<li>
-<p>Chọn <strong>Subnet</strong> là public subnet id đã xem ở phần trên.</p>
-</li>
-<li>
-<p>Chọn keypair <strong>KPforDevAxInstances</strong>
-<img src="../../../images/2/8.png?width=90pc" alt="NewProjectCodeStar"></p>
-</li>
-<li>
-<p>Chọn <strong>Next</strong></p>
-</li>
-<li>
-<p>Chọn <strong>Create Project</strong>
-<img src="../../../images/2/9.png?width=90pc" alt="NewProjectCodeStar"></p>
-</li>
-<li>
-<p>CodeStar sẽ bắt đầu tạo một pipeline. Sau một vài phút, màn hình sẽ hiển thị project của bạn.
-<img src="../../../images/2/10.png?width=90pc" alt="NewProjectCodeStar"></p>
-</li>
-<li>
-<p>Trong khi chờ quá trình tạo project được hoàn tất, hãy khám phá tab IDE và tìm hiểu cách truy cập mã nguồn project. 
-<img src="../../../images/2/11.png?width=90pc" alt="NewProjectCodeStar"></p>
-</li>
-<li>
-<p>Trong menu bên trái, chọn <strong>Team</strong>.</p>
-</li>
-<li>
-<p>Chọn <strong>Add team member</strong>.
-<img src="../../../images/2/12.png?width=90pc" alt="Addmember"></p>
-</li>
-<li>
-<p>Chúng ta sẽ thêm một user đã có sẵn <em>awsstudent</em>. Tại mục <strong>Select user</strong>, chọn <strong>awsstudent</strong></p>
-</li>
-<li>
-<p>CodeStar yêu cầu các thành viên phải có một địa chỉ email. Do đó, hãy nhớ thêm địa chỉ email cho user.</p>
-</li>
-<li>
-<p>Tại mục <strong>Role Type</strong>, chọn <strong>Owner</strong>.</p>
-</li>
-<li>
-<p>Chọn <strong>Remote Access</strong>.
-<img src="../../../images/2/13.png?width=90pc" alt="Addmember"></p>
-</li>
-<li>
-<p>Tiếp theo, chúng ta sẽ tạo một user mới. Chọn <strong>Add team member</strong>.</p>
-</li>
-<li>
-<p>Tại mục <strong>User</strong>, chọn <strong>Create new IAM user</strong>. Điều này sẽ chuyển hướng bạn tới IAM Management để tạo một user.
-<img src="../../../images/2/16.png?width=90pc" alt="CreateNewMember"></p>
-</li>
-<li>
-<p>Trong IAM Management Console nhập username, đánh dấu chọn cả 2 loại truy cập: Programmatic access và AWS Management Console access.
-<img src="../../../images/2/17.png?width=90pc" alt="CreateNewMember"></p>
-</li>
-<li>
-<p>Chọn <strong>Next: Permissions</strong>.</p>
-</li>
-<li>
-<p>Chọn <strong>Attach existing policies directly</strong> và đánh dấu chọn <strong>AdministratorAccess</strong>.
-<img src="../../../images/2/18.png?width=90pc" alt="CreateNewMember"></p>
-</li>
-<li>
-<p>Chọn <strong>Next: Tags</strong>, gắn thẻ cho user nếu cần hoặc chọn <strong>Next: Review</strong> để xem lại cấu hình.
-<img src="../../../images/2/19.png?width=90pc" alt="CreateNewMember"></p>
-</li>
-<li>
-<p>Chọn <strong>Create User</strong> và chọn <strong>Download .csv</strong> để tải xuống tập tin chứa secret key và access key. Thông tin này sẽ được dùng trong các phần tiếp theo.
-<img src="../../../images/2/20.png?width=90pc" alt="CreateNewMember"></p>
-</li>
-<li>
-<p>Chọn <strong>Close</strong> và trở lại trang CodeStar
-<img src="../../../images/2/21.png?width=90pc" alt="CreateNewMember"></p>
-</li>
-<li>
-<p>Chọn biểu tượng <em>refesh</em> để cập nhật lại danh sách các user, chọn User user-lab02 vừa tạo.
-<img src="../../../images/2/22.png?width=90pc" alt="AddNewMember"></p>
-</li>
-<li>
-<p>Nhập địa chỉ email cho user, chọn <strong>Owner</strong> tại mục <strong>Project role</strong>, đánh dấu chọn <strong>Remote Access</strong> và chọn <strong>Add team member</strong></p>
-</li>
-<li>
-<p>Bây giờ chúng ta sẽ tạo credentials sử dụng cho Codecommit cho user vừa tạo.</p>
-</li>
-<li>
-<p>Truy cập <strong>IAM</strong> và vào <strong>Users</strong>.
-<img src="../../../images/2/23.png?width=90pc" alt="CredentialforCodecommit"></p>
-</li>
-<li>
-<p>Chọn user vừa tạo và chọn tab Security Credentials.
-<img src="../../../images/2/24.png?width=90pc" alt="CredentialforCodecommit"></p>
-</li>
-<li>
-<p>Kéo xuống mục <strong>HTTPS Git credentials for AWS CodeCommit</strong> và chọn <strong>Generate Credentials</strong>
-<img src="../../../images/2/25.png?width=90pc" alt="CredentialforCodecommit">
-CodeStar bây giờ đã cấu hình xong một CI/CD pipeline để phân phối project artefact của bạn vào một máy chủ web Elastic Beanstalk PaaS công khai. Quá trình này sẽ mất một vài phút, hãy kiểm tra liên kết trong đường dẫn và nhấn vào liên kết đó và xem ứng dụng java HelloWorld mới của bạn đã được tạo.</p>
-</li>
-<li>
-<p>Truy cập <strong>CodeStar</strong> và chọn <strong>Projects</strong></p>
-</li>
-<li>
-<p>Chọn <strong>TravelBuddy</strong>, chọn tab <strong>Pipeline</strong>. Bạn sẽ thấy 3 giai đoạn được tạo <strong>Source, Build và Deploy.</strong>
-<img src="../../../images/2/26.png?width=90pc" alt="CodeStarProject"></p>
-</li>
-<li>
-<p>Bạn có thể chọn <strong>View application</strong> tại góc trên bên phải để truy cập ứng dụng đang chạy của bạn.
-<img src="../../../images/2/27.png?width=90pc" alt="CodeStarProject"></p>
-</li>
+<p>This will list the template tags that match the request - select the tag <strong>Java Spring - Web Application</strong></p>
+<p><img src="/images/2/6.png?width=90pc" alt="NewProjectCodeStar"></p>
+<ol start="7">
+<li>In the next page, enter <strong>TravelBuddy</strong> for <strong>Project name</strong>.</li>
+<li>In repository section, make sure that <strong>CodeCommit</strong> is selected and repository name (<strong>Travel Buddy</strong>) is auto filled.</li>
 </ol>
+<p><img src="/images/2/7.png?width=90pc" alt="NewProjectCodeStar"></p>
+<ol start="9">
+<li>In <strong>EC2 Configuration</strong> section, select <strong>t3.medium</strong> for Instance Type</li>
+<li>Select <strong>vpc</strong> match the VPC name of the exercise.</li>
+<li>Select <strong>Subnet</strong> is public subnet id seen above.</li>
+<li>Select <strong>KPforDevAxInstances</strong> keypair.</li>
+<li>Select <strong>Next</strong></li>
+</ol>
+<p><img src="/images/2/8.png?width=90pc" alt="NewProjectCodeStar"></p>
+<ol start="14">
+<li>Select <strong>Create Project</strong></li>
+</ol>
+<p><img src="/images/2/9.png?width=90pc" alt="NewProjectCodeStar"></p>
+<ol start="15">
+<li>The CodeStar will start creating a pipeline. After a few minutes, the new project is displayed.</li>
+</ol>
+<p><img src="/images/2/10.png?width=90pc" alt="NewProjectCodeStar"></p>
+<ol start="16">
+<li>While waiting for project creation completed, explore the IDE tab and learn how to access the project source code.</li>
+</ol>
+<p><img src="/images/2/11.png?width=90pc" alt="NewProjectCodeStar"></p>
+<ol start="17">
+<li>On the left menu, select <strong>Team</strong>.</li>
+<li>Select <strong>Add team member</strong>.</li>
+</ol>
+<p><img src="/images/2/12.png?width=90pc" alt="Addmember"></p>
+<ol start="19">
+<li>We will add an existing user <strong>awsstudent</strong>. In the <strong>Select user</strong> section, select <strong>awsstudent</strong></li>
+<li>CodeStar requires members to have an email address. Therefore, remember to add an email address for the user.</li>
+<li>In <strong>Role Type</strong> section, select <strong>Owner</strong>.</li>
+<li>Select <strong>Remote Access</strong>.</li>
+<li>Click <strong>Add team member</strong>.</li>
+</ol>
+<p><img src="/images/2/13.png?width=90pc" alt="Addmember"></p>
+<ol start="24">
+<li>Next, we will create a new user. Click <strong>Add team member</strong>.</li>
+<li>In <strong>User</strong> section, select <strong>Create new IAM user</strong>. This will redirect you to IAM Management to create a user.</li>
+</ol>
+<p><img src="/images/2/16.png?width=90pc" alt="CreateNewMember"></p>
+<ol start="26">
+<li>In IAM Management Console, enter <code>user-lab02</code> for username, select both access types: <strong>Programmatic access</strong> and <strong>AWS Management Console access</strong>.</li>
+<li>Click <strong>Next: Permissions</strong>.</li>
+</ol>
+<p><img src="/images/2/17.png?width=90pc" alt="CreateNewMember"></p>
+<ol start="28">
+<li>Select <strong>Attach existing policies directly</strong> and select <strong>AdministratorAccess</strong>.</li>
+</ol>
+<ul>
+<li>Chọn <strong>Next: Tags</strong></li>
+</ul>
+<p><img src="/images/2/18.png?width=90pc" alt="CreateNewMember"></p>
+<ol start="29">
+<li>Click <strong>Next: Tags</strong>, tag the user if needed or click <strong>Next: Review</strong> to review the configure.</li>
+</ol>
+<p><img src="/images/2/19.png?width=90pc" alt="CreateNewMember"></p>
+<ol start="30">
+<li>Click <strong>Create User</strong> and</li>
+</ol>
+<p><img src="/images/2/20.png?width=90pc" alt="CreateNewMember"></p>
+<ol start="31">
+<li>Click <strong>Download .csv file</strong> to download file that contains a secret key and an access key.This information will be used in the following part.</li>
+</ol>
+<ul>
+<li>Click <strong>Close</strong> and back to CodeStar page.</li>
+</ul>
+<p><img src="/images/2/21.png?width=90pc" alt="CreateNewMember"></p>
+<ol start="32">
+<li>Click <em>refresh</em> symbol to refresh user list, select <strong>user-lab02</strong> just created</li>
+<li>Enter email for user, select <strong>Owner</strong> in <strong>Project role</strong> section, tick <strong>Remote Access</strong> and click <strong>Add team member</strong> .</li>
+</ol>
+<p><img src="/images/2/22.png?width=90pc" alt="AddNewMember"></p>
+<ol start="34">
+<li>Now, we will create credentials to use for Codecommit for the newly created user. Access to <strong>IAM</strong> console. Select <strong>Users</strong> on the left menu.</li>
+<li>Click newly created user</li>
+</ol>
+<p><img src="/images/2/23.png?width=90pc" alt="CredentialforCodecommit"></p>
+<ol start="36">
+<li>Select <strong>Security Credentials</strong> tab.</li>
+</ol>
+<p><img src="/images/2/24.png?width=90pc" alt="CredentialforCodecommit"></p>
+<ol start="37">
+<li>Scroll down to <strong>HTTPS Git credentials for AWS CodeCommit</strong> section and click <strong>Generate Credentials</strong></li>
+</ol>
+<p><img src="/images/2/25.png?width=90pc" alt="CredentialforCodecommit"></p>
+<ol start="38">
+<li>Click <strong>Download credentials</strong>, then click <strong>Close</strong>.</li>
+</ol>
+<p><img src="/images/2/25.png?width=90pc" alt="CredentialforCodecommit"></p>
+<p>CodeStar has now configured a CI/CD pipeline to deliver our project artefact to a public Elastic Beanstalk PaaS web server. This will take a few minutes, check the link in the path and click this link and check the your new java HelloWorld application has been created.</p>
+<ol start="39">
+<li>Access <strong>CodeStar</strong> and select <strong>Projects</strong></li>
+<li>Select <strong>TravelBuddy</strong>, then select <strong>Pipeline</strong> tab. Bạn sẽ thấy 3 giai đoạn được tạo <strong>Source, Build và Deploy.</strong></li>
+</ol>
+<p><img src="/images/2/26.png?width=90pc" alt="CodeStarProject"></p>
+<ol start="41">
+<li>You can click <strong>View application</strong> in the upper right corner to access to your running application.</li>
+</ol>
+<p><img src="/images/2/27.png?width=90pc" alt="CodeStarProject"></p>
 
 
 
@@ -1224,26 +1187,8 @@ CodeStar bây giờ đã cấu hình xong một CI/CD pipeline để phân phố
 
                     
                     
-                        
-                    
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
             
         
@@ -1440,10 +1385,10 @@ CodeStar bây giờ đã cấu hình xong một CI/CD pipeline để phân phố
 	 
 	 
 		
-			<a class="nav nav-prev" href="/2-configure-release-automation/" title="Cấu hình phát hành tự động"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/2-configure-release-automation/" title="Configure automatic release"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/2-configure-release-automation/2-connect-to-codecommit/" title="Kết nối Eclipse IDE với AWS Codecommit" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/2-configure-release-automation/2-connect-to-codecommit/" title="Connect to Eclipse IDE with AWS Codecommit" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1453,19 +1398,19 @@ CodeStar bây giờ đã cấu hình xong một CI/CD pipeline để phân phố
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1624844736"></script>
-    <script src="/js/perfect-scrollbar.min.js?1624844736"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1624844736"></script>
-    <script src="/js/jquery.sticky.js?1624844736"></script>
-    <script src="/js/featherlight.min.js?1624844736"></script>
-    <script src="/js/highlight.pack.js?1624844736"></script>
+    <script src="/js/clipboard.min.js?1673836861"></script>
+    <script src="/js/perfect-scrollbar.min.js?1673836861"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1673836861"></script>
+    <script src="/js/jquery.sticky.js?1673836861"></script>
+    <script src="/js/featherlight.min.js?1673836861"></script>
+    <script src="/js/highlight.pack.js?1673836861"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1624844736"></script>
-    <script src="/js/learn.js?1624844736"></script>
-    <script src="/js/hugo-learn.js?1624844736"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1673836861"></script>
+    <script src="/js/learn.js?1673836861"></script>
+    <script src="/js/hugo-learn.js?1673836861"></script>
 
-    <link href="/mermaid/mermaid.css?1624844736" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1624844736"></script>
+    <link href="/mermaid/mermaid.css?1673836861" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1673836861"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

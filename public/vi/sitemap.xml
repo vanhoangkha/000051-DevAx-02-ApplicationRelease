@@ -1,25 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <url>
-    <loc>/vi/1-prerequisites/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/1-prerequisites/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/1-prerequisites/"
-                />
-  </url>
-  
   <url>
     <loc>/vi/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+    <lastmod>1970-01-01T08:33:43+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -30,9 +14,20 @@
                 hreflang="vi"
                 href="/vi/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/vi/1-prerequisites/</loc>
+    <lastmod>1970-01-01T08:33:43+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/1-prerequisites/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/1-prerequisites/"
+                />
+  </url><url>
     <loc>/vi/1-prerequisites/1-create-environment/</loc>
     <xhtml:link
                 rel="alternate"
@@ -44,9 +39,7 @@
                 hreflang="vi"
                 href="/vi/1-prerequisites/1-create-environment/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/vi/5-monitor-service/1-monitor-service/</loc>
     <xhtml:link
                 rel="alternate"
@@ -58,37 +51,7 @@
                 hreflang="vi"
                 href="/vi/5-monitor-service/1-monitor-service/"
                 />
-  </url>
-  
-  <url>
-    <loc>/vi/3-automate-application-deployment/1-replace-application/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/3-automate-application-deployment/1-replace-application/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/3-automate-application-deployment/1-replace-application/"
-                />
-  </url>
-  
-  <url>
-    <loc>/vi/2-configure-release-automation/1-setup-codestar-project/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/2-configure-release-automation/1-setup-codestar-project/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/2-configure-release-automation/1-setup-codestar-project/"
-                />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/vi/4-deploy-windows-service/1-create-ec2-instance/</loc>
     <xhtml:link
                 rel="alternate"
@@ -100,25 +63,33 @@
                 hreflang="vi"
                 href="/vi/4-deploy-windows-service/1-create-ec2-instance/"
                 />
-  </url>
-  
-  <url>
-    <loc>/vi/4-deploy-windows-service/2-create-code-deploy-application/</loc>
+  </url><url>
+    <loc>/vi/3-automate-application-deployment/1-replace-application/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-deploy-windows-service/2-create-code-deploy-application/"
+                href="/3-automate-application-deployment/1-replace-application/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-deploy-windows-service/2-create-code-deploy-application/"
+                href="/vi/3-automate-application-deployment/1-replace-application/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/vi/2-configure-release-automation/1-setup-codestar-project/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-configure-release-automation/1-setup-codestar-project/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-configure-release-automation/1-setup-codestar-project/"
+                />
+  </url><url>
     <loc>/vi/2-configure-release-automation/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+    <lastmod>1970-01-01T08:33:43+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -129,9 +100,7 @@
                 hreflang="vi"
                 href="/vi/2-configure-release-automation/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/vi/5-monitor-service/2-optional-confirm-codedeploy-agent/</loc>
     <xhtml:link
                 rel="alternate"
@@ -143,9 +112,7 @@
                 hreflang="vi"
                 href="/vi/5-monitor-service/2-optional-confirm-codedeploy-agent/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/vi/3-automate-application-deployment/2-challenge-deploy-through-pipeline/</loc>
     <xhtml:link
                 rel="alternate"
@@ -157,9 +124,7 @@
                 hreflang="vi"
                 href="/vi/3-automate-application-deployment/2-challenge-deploy-through-pipeline/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/vi/2-configure-release-automation/2-connect-to-codecommit/</loc>
     <xhtml:link
                 rel="alternate"
@@ -171,11 +136,21 @@
                 hreflang="vi"
                 href="/vi/2-configure-release-automation/2-connect-to-codecommit/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/vi/4-deploy-windows-service/2-create-code-deploy-application/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/4-deploy-windows-service/2-create-code-deploy-application/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/4-deploy-windows-service/2-create-code-deploy-application/"
+                />
+  </url><url>
     <loc>/vi/3-automate-application-deployment/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+    <lastmod>1970-01-01T08:33:43+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -186,9 +161,7 @@
                 hreflang="vi"
                 href="/vi/3-automate-application-deployment/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/vi/5-monitor-service/3-optional-use-sdk-query-elastic-beanstalk/</loc>
     <xhtml:link
                 rel="alternate"
@@ -200,23 +173,7 @@
                 hreflang="vi"
                 href="/vi/5-monitor-service/3-optional-use-sdk-query-elastic-beanstalk/"
                 />
-  </url>
-  
-  <url>
-    <loc>/vi/3-automate-application-deployment/3-problem-determination/3-python27/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/3-automate-application-deployment/3-problem-determination/3-python27/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/3-automate-application-deployment/3-problem-determination/3-python27/"
-                />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/vi/4-deploy-windows-service/3-create-deployment-s3-bucket/</loc>
     <xhtml:link
                 rel="alternate"
@@ -228,9 +185,7 @@
                 hreflang="vi"
                 href="/vi/4-deploy-windows-service/3-create-deployment-s3-bucket/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/vi/3-automate-application-deployment/3-problem-determination/</loc>
     <xhtml:link
                 rel="alternate"
@@ -242,11 +197,9 @@
                 hreflang="vi"
                 href="/vi/3-automate-application-deployment/3-problem-determination/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/vi/4-deploy-windows-service/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+    <lastmod>1970-01-01T08:33:43+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -257,9 +210,7 @@
                 hreflang="vi"
                 href="/vi/4-deploy-windows-service/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/vi/4-deploy-windows-service/4-deploy-using-codedeploy/</loc>
     <xhtml:link
                 rel="alternate"
@@ -271,11 +222,9 @@
                 hreflang="vi"
                 href="/vi/4-deploy-windows-service/4-deploy-using-codedeploy/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/vi/5-monitor-service/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+    <lastmod>1970-01-01T08:33:43+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -286,11 +235,9 @@
                 hreflang="vi"
                 href="/vi/5-monitor-service/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/vi/6-challenge/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+    <lastmod>1970-01-01T08:33:43+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -301,11 +248,9 @@
                 hreflang="vi"
                 href="/vi/6-challenge/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/vi/7-conclustion/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+    <lastmod>1970-01-01T08:33:43+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -316,9 +261,7 @@
                 hreflang="vi"
                 href="/vi/7-conclustion/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/vi/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -330,9 +273,7 @@
                 hreflang="vi"
                 href="/vi/categories/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/vi/tags/</loc>
     <xhtml:link
                 rel="alternate"
@@ -345,5 +286,4 @@
                 href="/vi/tags/"
                 />
   </url>
-  
 </urlset>

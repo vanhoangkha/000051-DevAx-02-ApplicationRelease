@@ -3,30 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.101.0" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Kết nối Eclipse IDE với AWS Codecommit :: DevAx - Monoliths to Microservices - Migrating the Monolith</title>
+    <title>Connect to Eclipse IDE with AWS Codecommit :: DevAx - Monoliths to Microservices - Migrating the Monolith</title>
 
     
-    <link href="/css/nucleus.css?1624844736" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1624844736" rel="stylesheet">
-    <link href="/css/hybrid.css?1624844736" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1624844736" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1624844736" rel="stylesheet">
-    <link href="/css/auto-complete.css?1624844736" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1624844736" rel="stylesheet">
-    <link href="/css/theme.css?1624844736" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1624844736" rel="stylesheet">
+    <link href="/css/nucleus.css?1673836861" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1673836861" rel="stylesheet">
+    <link href="/css/hybrid.css?1673836861" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1673836861" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1673836861" rel="stylesheet">
+    <link href="/css/auto-complete.css?1673836861" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1673836861" rel="stylesheet">
+    <link href="/css/theme.css?1673836861" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1673836861" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1624844736" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1673836861" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1624844736"></script>
+    <script src="/js/jquery-3.3.1.min.js?1673836861"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1624844736"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1624844736"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1673836861"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1673836861"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1624844736"></script>
+<script type="text/javascript" src="/js/search.js?1673836861"></script>
 
     
   </div>
@@ -82,13 +82,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisites/" title="Chuẩn bị" class="dd-item 
+    <li data-nav-id="/1-prerequisites/" title="Preparation" class="dd-item 
         
         
         
         ">
       <a href="/1-prerequisites/">
-          <b>1. </b>Chuẩn bị
+          <b>1. </b>Preparation
           
             <i class="fas fa-check read-icon"></i>
           
@@ -113,13 +113,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisites/1-create-environment/" title="Chuẩn bị môi trường" class="dd-item 
+    <li data-nav-id="/1-prerequisites/1-create-environment/" title="Prepare Environment" class="dd-item 
         
         
         
         ">
       <a href="/1-prerequisites/1-create-environment/">
-          <b>1.1. </b>Chuẩn bị môi trường
+          <b>1.1. </b>Prepare Environment
           
             <i class="fas fa-check read-icon"></i>
           
@@ -148,13 +148,13 @@
  
   
     
-    <li data-nav-id="/2-configure-release-automation/" title="Cấu hình phát hành tự động" class="dd-item 
+    <li data-nav-id="/2-configure-release-automation/" title="Configure automatic release" class="dd-item 
         parent
         
         
         ">
       <a href="/2-configure-release-automation/">
-          <b>2. </b>Cấu hình phát hành tự động
+          <b>2. </b>Configure automatic release
           
             <i class="fas fa-check read-icon"></i>
           
@@ -179,13 +179,13 @@
  
   
     
-    <li data-nav-id="/2-configure-release-automation/1-setup-codestar-project/" title="Thiết lập một AWS CodeStar project " class="dd-item 
+    <li data-nav-id="/2-configure-release-automation/1-setup-codestar-project/" title="Configure AWS CodeStar project" class="dd-item 
         
         
         
         ">
       <a href="/2-configure-release-automation/1-setup-codestar-project/">
-          <b>2.1. </b>Thiết lập một AWS CodeStar project 
+          <b>2.1. </b>Configure AWS CodeStar project
           
             <i class="fas fa-check read-icon"></i>
           
@@ -207,13 +207,13 @@
  
   
     
-    <li data-nav-id="/2-configure-release-automation/2-connect-to-codecommit/" title="Kết nối Eclipse IDE với AWS Codecommit" class="dd-item 
+    <li data-nav-id="/2-configure-release-automation/2-connect-to-codecommit/" title="Connect to Eclipse IDE with AWS Codecommit" class="dd-item 
         
         active
         
         ">
       <a href="/2-configure-release-automation/2-connect-to-codecommit/">
-          <b>2.2. </b>Kết nối Eclipse IDE với AWS Codecommit
+          <b>2.2. </b>Connect to Eclipse IDE with AWS Codecommit
           
             <i class="fas fa-check read-icon"></i>
           
@@ -242,13 +242,13 @@
  
   
     
-    <li data-nav-id="/3-automate-application-deployment/" title="Triển khai ứng dụng" class="dd-item 
+    <li data-nav-id="/3-automate-application-deployment/" title="Application Deployment" class="dd-item 
         
         
         
         ">
       <a href="/3-automate-application-deployment/">
-          <b>3. </b>Triển khai ứng dụng
+          <b>3. </b>Application Deployment
           
             <i class="fas fa-check read-icon"></i>
           
@@ -273,13 +273,13 @@
  
   
     
-    <li data-nav-id="/3-automate-application-deployment/1-replace-application/" title="Thay thế ứng dụng mẫu" class="dd-item 
+    <li data-nav-id="/3-automate-application-deployment/1-replace-application/" title="Replace sample application" class="dd-item 
         
         
         
         ">
       <a href="/3-automate-application-deployment/1-replace-application/">
-          <b>3.1. </b>Thay thế ứng dụng mẫu
+          <b>3.1. </b>Replace sample application
           
             <i class="fas fa-check read-icon"></i>
           
@@ -301,13 +301,13 @@
  
   
     
-    <li data-nav-id="/3-automate-application-deployment/2-challenge-deploy-through-pipeline/" title="Challenge - Triển khai thông qua Pipeline" class="dd-item 
+    <li data-nav-id="/3-automate-application-deployment/2-challenge-deploy-through-pipeline/" title="Challenge - Deployment via Pipeline" class="dd-item 
         
         
         
         ">
       <a href="/3-automate-application-deployment/2-challenge-deploy-through-pipeline/">
-          <b>3.2. </b>Challenge - Triển khai thông qua Pipeline
+          <b>3.2. </b>Challenge - Deployment via Pipeline
           
             <i class="fas fa-check read-icon"></i>
           
@@ -329,58 +329,18 @@
  
   
     
-    <li data-nav-id="/3-automate-application-deployment/3-problem-determination/" title="Xác định lỗi" class="dd-item 
+    <li data-nav-id="/3-automate-application-deployment/3-problem-determination/" title="Determine error" class="dd-item 
         
         
         
         ">
       <a href="/3-automate-application-deployment/3-problem-determination/">
-          <b>3.3. </b>Xác định lỗi
+          <b>3.3. </b>Determine error
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/3-automate-application-deployment/3-problem-determination/3-python27/" title="Python 2.7 EOS" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/3-automate-application-deployment/3-problem-determination/3-python27/">
-          <b>3.3.1 </b>Python 2.7 EOS
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
               
     </li>
   
@@ -435,13 +395,13 @@
  
   
     
-    <li data-nav-id="/4-deploy-windows-service/1-create-ec2-instance/" title="Tạo máy ảo EC2" class="dd-item 
+    <li data-nav-id="/4-deploy-windows-service/1-create-ec2-instance/" title="Create EC2 instance" class="dd-item 
         
         
         
         ">
       <a href="/4-deploy-windows-service/1-create-ec2-instance/">
-          <b>4.1. </b>Tạo máy ảo EC2
+          <b>4.1. </b>Create EC2 instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -463,13 +423,13 @@
  
   
     
-    <li data-nav-id="/4-deploy-windows-service/2-create-code-deploy-application/" title="Tạo ứng dụng CodeDeploy và Deployment Group" class="dd-item 
+    <li data-nav-id="/4-deploy-windows-service/2-create-code-deploy-application/" title="Create CodeDeploy application and Deployment Group" class="dd-item 
         
         
         
         ">
       <a href="/4-deploy-windows-service/2-create-code-deploy-application/">
-          <b>4.1. </b>Tạo ứng dụng CodeDeploy và Deployment Group
+          <b>4.2. </b>Create CodeDeploy application and Deployment Group
           
             <i class="fas fa-check read-icon"></i>
           
@@ -491,13 +451,13 @@
  
   
     
-    <li data-nav-id="/4-deploy-windows-service/3-create-deployment-s3-bucket/" title="Tạo Triển khai S3 Bucket" class="dd-item 
+    <li data-nav-id="/4-deploy-windows-service/3-create-deployment-s3-bucket/" title="Create S3 Bucket Deployment" class="dd-item 
         
         
         
         ">
       <a href="/4-deploy-windows-service/3-create-deployment-s3-bucket/">
-          <b>4.3. </b>Tạo Triển khai S3 Bucket
+          <b>4.3. </b>Create S3 Bucket Deployment
           
             <i class="fas fa-check read-icon"></i>
           
@@ -519,13 +479,13 @@
  
   
     
-    <li data-nav-id="/4-deploy-windows-service/4-deploy-using-codedeploy/" title="Triển khai ứng dụng sử dụng CodeDeploy" class="dd-item 
+    <li data-nav-id="/4-deploy-windows-service/4-deploy-using-codedeploy/" title="Deploy application using CodeDeploy" class="dd-item 
         
         
         
         ">
       <a href="/4-deploy-windows-service/4-deploy-using-codedeploy/">
-          <b>4.4. </b>Triển khai ứng dụng sử dụng CodeDeploy
+          <b>4.4. </b>Deploy application using CodeDeploy
           
             <i class="fas fa-check read-icon"></i>
           
@@ -554,13 +514,13 @@
  
   
     
-    <li data-nav-id="/5-monitor-service/" title="Giám sát dịch vụ của bạn" class="dd-item 
+    <li data-nav-id="/5-monitor-service/" title="Monitor your service" class="dd-item 
         
         
         
         ">
       <a href="/5-monitor-service/">
-          <b>5. </b>Giám sát dịch vụ của bạn
+          <b>5. </b>Monitor your service
           
             <i class="fas fa-check read-icon"></i>
           
@@ -585,13 +545,13 @@
  
   
     
-    <li data-nav-id="/5-monitor-service/1-monitor-service/" title="Sử dụng Eclipse IDE" class="dd-item 
+    <li data-nav-id="/5-monitor-service/1-monitor-service/" title="Using Eclipse IDE" class="dd-item 
         
         
         
         ">
       <a href="/5-monitor-service/1-monitor-service/">
-          <b>5.1. </b>Sử dụng Eclipse IDE
+          <b>5.1. </b>Using Eclipse IDE
           
             <i class="fas fa-check read-icon"></i>
           
@@ -613,13 +573,13 @@
  
   
     
-    <li data-nav-id="/5-monitor-service/2-optional-confirm-codedeploy-agent/" title="(Optional) Xác nhận cài đặt CodeDeploy agent " class="dd-item 
+    <li data-nav-id="/5-monitor-service/2-optional-confirm-codedeploy-agent/" title="(Optional) Confirm installation of CodeDeploy agent" class="dd-item 
         
         
         
         ">
       <a href="/5-monitor-service/2-optional-confirm-codedeploy-agent/">
-          <b>5.2. </b>(Optional) Xác nhận cài đặt CodeDeploy agent 
+          <b>5.2. </b>(Optional) Confirm installation of CodeDeploy agent
           
             <i class="fas fa-check read-icon"></i>
           
@@ -641,13 +601,13 @@
  
   
     
-    <li data-nav-id="/5-monitor-service/3-optional-use-sdk-query-elastic-beanstalk/" title="(Optional) Sử dụng SDK để truy vấn Elastic Beanstalk" class="dd-item 
+    <li data-nav-id="/5-monitor-service/3-optional-use-sdk-query-elastic-beanstalk/" title="(Optional) Using the SDK to query Elastic Beanstalk" class="dd-item 
         
         
         
         ">
       <a href="/5-monitor-service/3-optional-use-sdk-query-elastic-beanstalk/">
-          <b>5.3. </b>(Optional) Sử dụng SDK để truy vấn Elastic Beanstalk
+          <b>5.3. </b>(Optional) Using the SDK to query Elastic Beanstalk
           
             <i class="fas fa-check read-icon"></i>
           
@@ -676,13 +636,13 @@
  
   
     
-    <li data-nav-id="/6-challenge/" title="Thử thách" class="dd-item 
+    <li data-nav-id="/6-challenge/" title="Challenge" class="dd-item 
         
         
         
         ">
       <a href="/6-challenge/">
-          <b>6. </b>Thử thách
+          <b>6. </b>Challenge
           
             <i class="fas fa-check read-icon"></i>
           
@@ -702,13 +662,13 @@
  
   
     
-    <li data-nav-id="/7-conclustion/" title="Kết luận" class="dd-item 
+    <li data-nav-id="/7-conclustion/" title="Conclusion" class="dd-item 
         
         
         
         ">
       <a href="/7-conclustion/">
-          <b>7. </b>Kết luận
+          <b>7. </b>Conclusion
           
             <i class="fas fa-check read-icon"></i>
           
@@ -807,6 +767,21 @@
     <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
      
 </left>
+<left>
+    <br>
+    <br>
+        <b> Last Updated </b> <br>
+        <i><font color=orange>15-01-2023</font></i>
+    </left>
+    <left>
+        <br>
+        <br>
+            <b> Team </b> <br>
+           
+            <i>
+                <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng</a>
+        </i>
+        </left>
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
@@ -848,7 +823,7 @@
             
           
           
-            <a href='/'>Cấu hình tự động phát hành ứng dụng</a> > <a href='/2-configure-release-automation/'>Cấu hình phát hành tự động</a> > Kết nối Eclipse IDE với AWS Codecommit
+            <a href='/'>Configure app auto-release</a> > <a href='/2-configure-release-automation/'>Configure automatic release</a> > Connect to Eclipse IDE with AWS Codecommit
           
         
           
@@ -877,7 +852,7 @@
           
             <h1>
               
-              Kết nối Eclipse IDE với AWS Codecommit
+              Connect to Eclipse IDE with AWS Codecommit
             </h1>
           
 
@@ -885,62 +860,96 @@
 
 
 
-	<p>Trong bài thực hành này, bạn sẽ kết nối Eclipse IDE tới AWS CodeCommit</p>
+	<p>This the section, you will connect to Eclipse IDE with AWS CodeCommit.</p>
 <ol>
-<li>Trong AWS CodeStar dashboard, chọn tab <strong>IDE</strong>
-<img src="../../../images/2/28.png?width=90pc" alt="OpenIDE"></li>
-<li>Chọn <strong>Eclipse</strong> và chọn <strong>View Instructions</strong>
-<img src="../../../images/2/29.png?width=90pc" alt="OpenIDE"></li>
-<li>Bạn sẽ sử dụng IAM user mà bạn đã tạo trước đó để cấu hình AWS Codecommit. Đảm bảo rằng bạn có user IAM secret key và access key mà bạn đã tải xuống trước đó.</li>
-<li>Truy cập máy ảo Windows, mở <strong>Eclipse</strong>. Trong lần đầu tiên khởi động, Eclipse sẽ hỏi bạn cấu hình workspace.
-<img src="../../../images/2/30.png?width=90pc" alt="OpenIDE"></li>
-<li>Chọn <strong>Use this as the default and do not ask again</strong> và chọn <strong>Launch</strong></li>
-<li>Nếu AWS Toolkit đã được cài đặt sẵn trên Eclipse, Eclipse sẽ xuất hiện một hộp thoại <strong>Welcome to the AWS Toolkit for Eclipse</strong>, bạn có thể nhập Access Key và Secret Key tại hộp thoại này.
-<img src="../../../images/2/31.png?width=90pc" alt="ConnectIDE"></li>
-<li>Nếu chưa được cài đặt, bạn có thể cài đặt AWS Toolkit bằng cách chọn <strong>Help</strong>, chọn <strong>Install new software</strong>
-<img src="../../../images/2/32.png?width=90pc" alt="ConnectIDE"></li>
-<li>Trong menu thả xuống, tìm <em><a href="https://aws.amazon.com/eclipse">https://aws.amazon.com/eclipse</a></em> và chọn các công cụ sau đây:</li>
+<li>In AWS CodeStar dashboard, select <strong>IDE</strong> tab.</li>
+<li>Select <strong>Eclipse</strong> and select <strong>View Instructions</strong>.</li>
+</ol>
+<p><img src="/images/2/28.png?width=90pc" alt="OpenIDE"></p>
+<p><img src="/images/2/29.png?width=90pc" alt="OpenIDE"></p>
+<ol start="3">
+<li>You will use the IAM user you created earlier to configure AWS Codecommit. Make sure you have the user IAM secret key and access key that you downloaded earlier.</li>
+<li>Access to the Windows virtual machine, open <strong>Eclipse</strong>. On first startup, Eclipse will ask you to configure the workspace.</li>
+<li>Tick <strong>Use this as the default and do not ask again</strong> and click <strong>Launch</strong>.</li>
+</ol>
+<p><img src="/images/2/30.png?width=90pc" alt="OpenIDE"></p>
+<ol start="6">
+<li>If the AWS Toolkit is pre-installed on Eclipse, a dialog box appears - <strong>Welcome to the AWS Toolkit for Eclipse</strong>.</li>
+</ol>
+<ul>
+<li>Enter <strong>Access Key</strong> and <strong>Secret Key</strong> at this dialog.</li>
+<li>Click <strong>Finish</strong></li>
+</ul>
+<p><img src="/images/2/31.png?width=50pc" alt="ConnectIDE"></p>
+<ol start="7">
+<li>If not already installed, you can install AWS Toolkit by selecting <strong>Help</strong>, selecting <strong>Install new software</strong></li>
+</ol>
+<p><img src="/images/2/32.png?width=90pc" alt="ConnectIDE"></p>
+<ol start="8">
+<li>In the drop-down menu, find <em><a href="https://aws.amazon.com/eclipse">https://aws.amazon.com/eclipse</a></em> and select the below tools:</li>
 </ol>
 <ul>
 <li>AWS Developer Tools</li>
 <li>AWS Deployment Tools
-<img src="../../../images/2/33.png?width=90pc" alt="ConnectIDE"></li>
+Then, click <strong>Next</strong>.</li>
 </ul>
+<p><img src="/images/2/33.png?width=90pc" alt="ConnectIDE"></p>
+
+<div class="notices note" ><p>If the <strong>Next</strong> button cannot be pressed, you do not need to install the tools.</p>
+</div>
+
 <ol start="9">
-<li>Chọn <strong>Next</strong>.
-<img src="../../../images/2/34.png?width=90pc" alt="ConnectIDE"></li>
-<li>Trong cửa sổ <strong>Review</strong>, chọn <strong>Next</strong>
-<img src="../../../images/2/35.png?width=90pc" alt="ConnectIDE"></li>
-<li>Chọn <strong>I accept the terms of the license agreements</strong> và chọn <strong>Finish</strong>
-<img src="../../../images/2/36.png?width=90pc" alt="ConnectIDE"></li>
-<li>Sau khi cài đặt xong, chọn <strong>Restart Now</strong></li>
-<li>Mở <strong>Eclipse IDE</strong>, tìm biểu tượng <strong>AWS</strong>, nhấp vào mũi tên thả xuống và chọn <strong>Preferences…</strong>
-<img src="../../../images/2/37.png?width=90pc" alt="ConnectIDE"></li>
-<li>Đặt <strong>Default Profile</strong> thành <em>default</em></li>
-<li>Nhập thông tin <strong>Profile credentials</strong> vào hộp thoại <strong>Profile Details</strong>
-<img src="../../../images/2/38.png?width=50pc" alt="ConnectIDE"></li>
-<li>Chọn <strong>Apply and Close</strong></li>
-<li>Chọn biểu tượng <strong>AWS</strong> và chọn <strong>Import AWS CodeStar Project…</strong>.<br>
-<img src="../../../images/2/39.png?width=90pc" alt="ConnectIDE"></li>
-<li>Chọn region đang tiến hành bài thực hành tại mục <strong>Account and region</strong>. Chọn <strong>TravelBuddy</strong> và <strong>TravelBuddy</strong> repository.</li>
-<li>Nhập thông tin git credentials đã tải xuống ở phần trước vào mục <strong>Configure Git credentials</strong>
-<img src="../../../images/2/40.png?width=50pc" alt="ConnectIDE"></li>
-<li>Chọn <strong>Next</strong>.</li>
-<li>Có thể xuất hiện một hội thoại báo lỗi, bạn có thể bỏ qua hộp thoại này bằng cách chọn <strong>OK</strong>.<br>
-<img src="../../../images/2/41.png?width=50pc" alt="ConnectIDE"></li>
-<li>Chọn <strong>Master</strong> và chọn <strong>Next</strong>.<br>
-<img src="../../../images/2/42.png?width=90pc" alt="ConnectIDE"></li>
-<li>Để các thông tin khác như mặc định và chọn <strong>Next</strong>.<br>
-<img src="../../../images/2/43.png?width=90pc" alt="ConnectIDE">
-IDE sẽ lấy các tập tin từ kho lưu trữ CodeCommit và chuẩn bị để bạn có thể bắt đầu viết mã nguồn. Có thể có lỗi xảy ra với mã nguồn vừa tải xuống này, tuy nhiên bạn có thể bỏ qua nó vì bạn sẽ không sử dụng mã này ngoài việc kiểm tra nó trong bước tiếp theo.</li>
-<li>Hãy dành chút thời gian để xem cấu trúc project trước khi bạn có thể tiếp tục. Ứng dụng mẫu Hello World này trình bày một trang web cho người dùng và kết nối với một Spring controller chuẩn.
-<img src="../../../images/2/44.png?width=90pc" alt="ConnectIDE">
-Trong khi bạn thiết lập môi trường CodeStar của mình trong IDE, project của bạn sẽ được tự động triển khai - một pipeline phân phối sẽ được thiết lập và ứng dụng mẫu được triển khai trên môi trường Elastic Beanstalk PaaS. Quá trình này sẽ mất vài phút để có thể đã hoàn tất.</li>
+<li>Click <strong>Next</strong>.</li>
 </ol>
-<p>Sau khi bạn đã xem qua đoạn mã trong IDE, hãy quay lại bảng điều khiển AWS CodeStar và kiểm tra tiến trình triển khai. Ở góc trên cùng bên phải, hãy đợi cho đến khi bạn thấy <strong>Provisioning 100% complete</strong> rồi nhấp vào <strong>Skip</strong>.</p>
-<p>Ở bên phải của trang dự án, bạn sẽ thấy bảng <strong>Continuous Deployment panel</strong> . Kiểm tra để đảm bảo rằng việc triển khai Elastic Beanstalk đã thành công, để xác nhận rằng việc triển khai ban đầu của ứng dụng mẫu đã hoàn tất. Nếu hoàn tất, hãy nhấp vào liên kết <strong>View application</strong> để truy cập trang web.
-Nếu triển khai thành công, bạn sẽ thấy một trang web tương tự như sau:</p>
-<p>Như vậy, bạn vừa triển khai thành công một CI/CD automation pipeline hoàn chỉnh.</p>
+<p><img src="/images/2/34.png?width=50pc" alt="ConnectIDE"></p>
+<ol start="10">
+<li>In <strong>Review</strong> window, click <strong>Next</strong>.</li>
+</ol>
+<p><img src="/images/2/35.png?width=50pc" alt="ConnectIDE"></p>
+<ol start="11">
+<li>Select <strong>I accept the terms of the license agreements</strong> and click <strong>Finish</strong></li>
+</ol>
+<p><img src="/images/2/36.png?width=50pc" alt="ConnectIDE"></p>
+<ol start="12">
+<li>After the installation is done, click <strong>Restart Now</strong></li>
+<li>If you have already set the information in step 6, skip steps 13 to 16.</li>
+</ol>
+<ul>
+<li>Open <strong>Eclipse IDE</strong>, find <strong>AWS</strong> symbol, click the drop-down arrow and select <strong>Preferences…</strong></li>
+</ul>
+<p><img src="/images/2/37.png?width=90pc" alt="ConnectIDE"></p>
+<ol start="14">
+<li>Setting <strong>Default Profile</strong> to <em>default</em>.</li>
+<li>Enter <strong>Profile credentials</strong> information to <strong>Profile Details</strong> dialog box.</li>
+<li>Click <strong>Apply and Close</strong>.</li>
+</ol>
+<p><img src="/images/2/38.png?width=90pc" alt="ConnectIDE"></p>
+<ol start="17">
+<li>Select <strong>AWS</strong> symbol and select <strong>Import AWS CodeStar Project…</strong>.</li>
+</ol>
+<p><img src="/images/2/39.png?width=90pc" alt="ConnectIDE"></p>
+<ol start="18">
+<li>Select the region where the practice is being conducted in <strong>Account and region</strong> section. Select <strong>TravelBuddy</strong> and <strong>TravelBuddy</strong> repository.</li>
+<li>Enter downloaded git credentials in the previous part to <strong>Configure Git credentials</strong> section.</li>
+<li>Click <strong>Next</strong>.</li>
+</ol>
+<p><img src="/images/2/40.png?width=90pc" alt="ConnectIDE"></p>
+<ol start="21">
+<li>An error dialog may appear, which you can dismiss by selecting <strong>OK</strong>.</li>
+<li>Click <strong>Next</strong>.</li>
+</ol>
+<p><img src="/images/2/41.png?width=90pc" alt="ConnectIDE"></p>
+<ol start="23">
+<li>Leave other information as default and press <strong>Finish</strong>.</li>
+</ol>
+<p><img src="/images/2/43.png?width=90pc" alt="ConnectIDE"></p>
+<p>The IDE will pull the files from the CodeCommit repository and prepare them for you to start coding. There may be an error with this downloaded source code, however you can ignore it as you will not be using it other than check it out in the next step.</p>
+<ol start="24">
+<li>Take a moment to look at the project structure before you can continue. This Hello World sample application presents a web page to the user and connects to a standard Spring controller.</li>
+</ol>
+<p><img src="/images/2/44.png?width=90pc" alt="ConnectIDE"></p>
+<p>So you have finished connecting and pulling source code from CodeCommit to Developer machine.
+In the next step, we will change code and release the new version of the appliction to Elastic Beanstalk.</p>
 
 
 
@@ -1128,26 +1137,8 @@ Nếu triển khai thành công, bạn sẽ thấy một trang web tương tự 
 
                     
                     
-                        
-                    
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
             
         
@@ -1344,10 +1335,10 @@ Nếu triển khai thành công, bạn sẽ thấy một trang web tương tự 
 	 
 	 
 		
-			<a class="nav nav-prev" href="/2-configure-release-automation/1-setup-codestar-project/" title="Thiết lập một AWS CodeStar project "> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/2-configure-release-automation/1-setup-codestar-project/" title="Configure AWS CodeStar project"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/3-automate-application-deployment/" title="Triển khai ứng dụng" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/3-automate-application-deployment/" title="Application Deployment" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1357,19 +1348,19 @@ Nếu triển khai thành công, bạn sẽ thấy một trang web tương tự 
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1624844736"></script>
-    <script src="/js/perfect-scrollbar.min.js?1624844736"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1624844736"></script>
-    <script src="/js/jquery.sticky.js?1624844736"></script>
-    <script src="/js/featherlight.min.js?1624844736"></script>
-    <script src="/js/highlight.pack.js?1624844736"></script>
+    <script src="/js/clipboard.min.js?1673836861"></script>
+    <script src="/js/perfect-scrollbar.min.js?1673836861"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1673836861"></script>
+    <script src="/js/jquery.sticky.js?1673836861"></script>
+    <script src="/js/featherlight.min.js?1673836861"></script>
+    <script src="/js/highlight.pack.js?1673836861"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1624844736"></script>
-    <script src="/js/learn.js?1624844736"></script>
-    <script src="/js/hugo-learn.js?1624844736"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1673836861"></script>
+    <script src="/js/learn.js?1673836861"></script>
+    <script src="/js/hugo-learn.js?1673836861"></script>
 
-    <link href="/mermaid/mermaid.css?1624844736" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1624844736"></script>
+    <link href="/mermaid/mermaid.css?1673836861" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1673836861"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

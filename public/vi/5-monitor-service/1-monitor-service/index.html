@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.101.0" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Sử dụng Eclipse IDE :: DevAx - Chuyển đổi Monoliths sang Microservices - Chuyển đổi Ứng dụng Monolith</title>
 
     
-    <link href="/css/nucleus.css?1624844736" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1624844736" rel="stylesheet">
-    <link href="/css/hybrid.css?1624844736" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1624844736" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1624844736" rel="stylesheet">
-    <link href="/css/auto-complete.css?1624844736" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1624844736" rel="stylesheet">
-    <link href="/css/theme.css?1624844736" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1624844736" rel="stylesheet">
+    <link href="/css/nucleus.css?1673836861" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1673836861" rel="stylesheet">
+    <link href="/css/hybrid.css?1673836861" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1673836861" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1673836861" rel="stylesheet">
+    <link href="/css/auto-complete.css?1673836861" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1673836861" rel="stylesheet">
+    <link href="/css/theme.css?1673836861" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1673836861" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1624844736" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1673836861" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1624844736"></script>
+    <script src="/js/jquery-3.3.1.min.js?1673836861"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1624844736"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1624844736"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1673836861"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1673836861"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1624844736"></script>
+<script type="text/javascript" src="/js/search.js?1673836861"></script>
 
     
   </div>
@@ -341,46 +341,6 @@
           
       </a>
       
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/3-automate-application-deployment/3-problem-determination/3-python27/" title="Python 2.7 EOS" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/3-automate-application-deployment/3-problem-determination/3-python27/">
-          <b>3.3.1 </b>Python 2.7 EOS
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
               
     </li>
   
@@ -469,7 +429,7 @@
         
         ">
       <a href="/vi/4-deploy-windows-service/2-create-code-deploy-application/">
-          <b>4.1. </b>Tạo ứng dụng CodeDeploy và Deployment Group
+          <b>4.2. </b>Tạo ứng dụng CodeDeploy và Deployment Group
           
             <i class="fas fa-check read-icon"></i>
           
@@ -807,6 +767,21 @@
     <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
      
 </left>
+<left>
+    <br>
+    <br>
+        <b> Last Updated </b> <br>
+        <i><font color=orange>15-01-2023</font></i>
+    </left>
+    <left>
+        <br>
+        <br>
+            <b> Team </b> <br>
+           
+            <i>
+                <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng</a>
+        </i>
+        </left>
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
@@ -887,13 +862,17 @@
 
 	<ol>
 <li>Trong AWS CodeDeploy Console, chọn <strong>Deployments</strong></li>
-<li>Chọn tên deployment có <em>deploymentID</em> giống với <em>deploymentID</em> được trả về từ CLI ở phần trước
-<img src="../../../images/5/1.png?width=90pc" alt="OpenDeployment"></li>
-<li>Kéo xuống <strong>Deployment Lifecycle Events</strong>, bạn sẽ thấy 2 máy ảo EC2 được gắn thẻ và thuộc deployment group. Một trong 2 sẽ có trạng thái là <strong>In Progress</strong> và cái còn lại là <strong>Pending</strong>, bởi vì chúng ta đã sử dụng behaviour cấu hình <strong>CodeDeployDefault.OneAtATime</strong> trong lời gọi CLI. Điều này buộc CodeDeploy chỉ triển khai bản cập nhật cho một máy chủ tại một thời điểm.
-<img src="../../../images/5/2.png?width=90pc" alt="OpenDeployment"></li>
-<li>Trong thời gian ngắn, trạng thái sẽ thay đổi và bạn sẽ có thể xem các sự kiện. Nhấp vào <strong>View Events</strong> để hiển thị các sự kiện cho (các) máy ảo khi chúng được triển khai.
-<img src="../../../images/5/3.png?width=90pc" alt="OpenDeployment"></li>
+<li>Chọn tên deployment có <em>deploymentID</em> giống với <em>deploymentID</em> được trả về từ CLI ở phần trước</li>
 </ol>
+<p><img src="/images/5/1.png?width=90pc" alt="OpenDeployment"></p>
+<ol start="3">
+<li>Kéo xuống <strong>Deployment Lifecycle Events</strong>, bạn sẽ thấy 2 máy ảo EC2 được gắn thẻ và thuộc deployment group. Một trong 2 sẽ có trạng thái là <strong>In Progress</strong> và cái còn lại là <strong>Pending</strong>, bởi vì chúng ta đã sử dụng behaviour cấu hình <strong>CodeDeployDefault.OneAtATime</strong> trong lời gọi CLI. Điều này buộc CodeDeploy chỉ triển khai bản cập nhật cho một máy chủ tại một thời điểm.</li>
+</ol>
+<p><img src="/images/5/2.png?width=90pc" alt="OpenDeployment"></p>
+<ol start="4">
+<li>Trong thời gian ngắn, trạng thái sẽ thay đổi và bạn sẽ có thể xem các sự kiện. Nhấp vào <strong>View Events</strong> để hiển thị các sự kiện cho (các) máy ảo khi chúng được triển khai.</li>
+</ol>
+<p><img src="/images/5/3.png?width=90pc" alt="OpenDeployment"></p>
 
 
 
@@ -1073,26 +1052,8 @@
 
                     
                     
-                        
-                    
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
             
         
@@ -1307,19 +1268,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1624844736"></script>
-    <script src="/js/perfect-scrollbar.min.js?1624844736"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1624844736"></script>
-    <script src="/js/jquery.sticky.js?1624844736"></script>
-    <script src="/js/featherlight.min.js?1624844736"></script>
-    <script src="/js/highlight.pack.js?1624844736"></script>
+    <script src="/js/clipboard.min.js?1673836861"></script>
+    <script src="/js/perfect-scrollbar.min.js?1673836861"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1673836861"></script>
+    <script src="/js/jquery.sticky.js?1673836861"></script>
+    <script src="/js/featherlight.min.js?1673836861"></script>
+    <script src="/js/highlight.pack.js?1673836861"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1624844736"></script>
-    <script src="/js/learn.js?1624844736"></script>
-    <script src="/js/hugo-learn.js?1624844736"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1673836861"></script>
+    <script src="/js/learn.js?1673836861"></script>
+    <script src="/js/hugo-learn.js?1673836861"></script>
 
-    <link href="/mermaid/mermaid.css?1624844736" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1624844736"></script>
+    <link href="/mermaid/mermaid.css?1673836861" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1673836861"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

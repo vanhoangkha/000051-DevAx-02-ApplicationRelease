@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Sử dụng Eclipse IDE on DevAx - Monoliths to Microservices - Migrating the Monolith</title>
+    <title>Using Eclipse IDE on DevAx - Monoliths to Microservices - Migrating the Monolith</title>
     <link>/5-monitor-service/1-monitor-service/</link>
-    <description>Recent content in Sử dụng Eclipse IDE on DevAx - Monoliths to Microservices - Migrating the Monolith</description>
-    <generator>Hugo -- gohugo.io</generator>
-    
-	<atom:link href="/5-monitor-service/1-monitor-service/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <description>Recent content in Using Eclipse IDE on DevAx - Monoliths to Microservices - Migrating the Monolith</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="/5-monitor-service/1-monitor-service/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

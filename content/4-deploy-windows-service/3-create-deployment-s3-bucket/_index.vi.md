@@ -11,5 +11,7 @@ AWS CodeDeploy yêu cầu các artefact triển khai phải được lưu trữ 
 ```bash
 aws s3 mb s3://idevelop-codedeployartefacts-<yourinitials>
 ```
-![CreateDeploymentS3](../../../images/4/17.png?width=90pc)
+
+![CreateDeploymentS3](/images/4/17.png?width=90pc)
+
 Thay <yourinitials> bằng tên của bạn sao cho tên bucket là duy nhất.

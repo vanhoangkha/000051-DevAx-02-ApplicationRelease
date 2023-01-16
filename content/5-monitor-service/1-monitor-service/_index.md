@@ -1,14 +1,19 @@
 +++
-title = "Sử dụng Eclipse IDE"
+title = "Using Eclipse IDE"
 weight = 1
 chapter = false
 pre = "<b>5.1. </b>"
 +++
 
-1. Trong AWS CodeDeploy Console, chọn **Deployments**
-2. Chọn tên deployment có *deploymentID* giống với *deploymentID* được trả về từ CLI ở phần trước
-![OpenDeployment](../../../images/5/1.png?width=90pc)
-3. Kéo xuống **Deployment Lifecycle Events**, bạn sẽ thấy 2 máy ảo EC2 được gắn thẻ và thuộc deployment group. Một trong 2 sẽ có trạng thái là **In Progress** và cái còn lại là **Pending**, bởi vì chúng ta đã sử dụng behaviour cấu hình **CodeDeployDefault.OneAtATime** trong lời gọi CLI. Điều này buộc CodeDeploy chỉ triển khai bản cập nhật cho một máy chủ tại một thời điểm.
-![OpenDeployment](../../../images/5/2.png?width=90pc)
-4. Trong thời gian ngắn, trạng thái sẽ thay đổi và bạn sẽ có thể xem các sự kiện. Nhấp vào **View Events** để hiển thị các sự kiện cho (các) máy ảo khi chúng được triển khai.
-![OpenDeployment](../../../images/5/3.png?width=90pc)
+1. In AWS CodeDeploy Console, select **Deployments**
+2. Select deployment name with *deploymentID* same as *deploymentID* returned from CLI in the privous section.
+
+![OpenDeployment](/images/5/1.png?width=90pc)
+
+3. Scroll down to **Deployment Lifecycle Events**, you will see 2 EC2 VMs tagged and belonging to the deployment group. One of the 2 will be **In Progress** and the other is **Pending**, because we used the **CodeDeployDefault.OneAtATime** configuration behavior in the CLI call. This forces CodeDeploy to only deploy updates to one server at a time.
+
+![OpenDeployment](/images/5/2.png?width=90pc)
+
+4. Shortly, the status will change and you will be able to see the events. Click **View Events** to display events for the virtual machine(s) as they are deployed.
+
+![OpenDeployment](/images/5/3.png?width=90pc)

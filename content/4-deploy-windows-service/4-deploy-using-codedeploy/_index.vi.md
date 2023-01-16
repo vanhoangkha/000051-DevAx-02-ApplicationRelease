@@ -44,18 +44,21 @@ Tệp appspec.yml phác thảo từng tập tin nguồn có trong tập tin nén
 #### Đẩy gói triển khai lên S3 sẵn sàng để triển khai bởi CodeDeploy
 Chúng ta đã sẵn sàng để triển khai dịch vụ Heartbeat tới EC2 instance. Chúng ta có các tập tin triển khai trong máy và cần đóng gói chúng lại và đẩy chúng lên S3. Công cụ AWS CLI CodeDeploy sẽ giúp chúng ta hiện việc này.
 
-2. Trong terminal, *cd* tới thư mục giải nén **CodeDeployHeartbeatDemo**. 
+2. Trong terminal, chạy lệnh  `cd CodeDeployHeartbeatDemo`. 
 3. Dùng các lệnh sau để đóng gói các tập tin và đẩy chúng lên S3.
 ```bash
-aws deploy push --application-name idevelopDemo --source CodeDeployHeartbeatDemo --profile aws-lab-env --s3-location s3://idevelop-codedeployartefacts-<yourinitials>/CodeDeployHeartbeatDemo.zip 
+aws deploy push --application-name idevelopDemo --source CodeDeployHeartbeatDemo --profile default --s3-location s3://idevelop-codedeployartefacts-<yourinitials>/CodeDeployHeartbeatDemo.zip 
 ```
 Thay <yourinitials> bằng tên của bạn giống như tên của bucket đã tạo ở bước trước.
 Nếu thành công, CLI sẽ trả về kết quả *To deploy with this revision, run:…*, nhưng bạn không nên sử dụng dòng lệnh này, thay vào đó hãy sử dụng câu lệnh được cung cấp ở bước sau.
-![UsingCodeDeploy](../../../images/4/18.png?width=90pc)
+
+![UsingCodeDeploy](/images/4/18.png?width=90pc)
+
 4.  Nhập các lệnh sau vào terminal
 ```bash
 aws deploy create-deployment --application-name idevelopDemo --deployment-group-name HeartbeatInstances --deployment-config-name CodeDeployDefault.OneAtATime --description "Initial Deployment" --s3-location bucket=idevelop-codedeployartefacts-<yourinitials>,key=CodeDeployHeartbeatDemo.zip,bundleType=zip
 ```
 Thay <yourinitials> bằng tên của bạn giống như tên của bucket đã tạo ở bước trước.
 Nếu thành công, CLI sẽ trả về **deploymentId**
-![UsingCodeDeploy](../../../images/4/19.png?width=90pc)
+
+![UsingCodeDeploy](/images/4/19.png?width=90pc)

@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Xác định lỗi on DevAx - Monoliths to Microservices - Migrating the Monolith</title>
+    <title>Determine error on DevAx - Monoliths to Microservices - Migrating the Monolith</title>
     <link>/3-automate-application-deployment/3-problem-determination/</link>
-    <description>Recent content in Xác định lỗi on DevAx - Monoliths to Microservices - Migrating the Monolith</description>
-    <generator>Hugo -- gohugo.io</generator>
-    
-	<atom:link href="/3-automate-application-deployment/3-problem-determination/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <description>Recent content in Determine error on DevAx - Monoliths to Microservices - Migrating the Monolith</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="/3-automate-application-deployment/3-problem-determination/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

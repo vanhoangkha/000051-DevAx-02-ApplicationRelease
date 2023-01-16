@@ -1,6 +1,6 @@
 +++
 title = "Cấu hình tự động phát hành ứng dụng"
-date = 2021
+date = 2023
 weight = 1
 chapter = false
 +++

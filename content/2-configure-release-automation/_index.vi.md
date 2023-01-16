@@ -1,6 +1,6 @@
 +++
 title = "Cấu hình phát hành tự động"
-date = 2021
+date = 2023
 weight = 2
 chapter = false
 pre = "<b>2. </b>"

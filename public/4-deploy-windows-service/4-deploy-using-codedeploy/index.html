@@ -3,30 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.101.0" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Triển khai ứng dụng sử dụng CodeDeploy :: DevAx - Monoliths to Microservices - Migrating the Monolith</title>
+    <title>Deploy application using CodeDeploy :: DevAx - Monoliths to Microservices - Migrating the Monolith</title>
 
     
-    <link href="/css/nucleus.css?1624844736" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1624844736" rel="stylesheet">
-    <link href="/css/hybrid.css?1624844736" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1624844736" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1624844736" rel="stylesheet">
-    <link href="/css/auto-complete.css?1624844736" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1624844736" rel="stylesheet">
-    <link href="/css/theme.css?1624844736" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1624844736" rel="stylesheet">
+    <link href="/css/nucleus.css?1673836861" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1673836861" rel="stylesheet">
+    <link href="/css/hybrid.css?1673836861" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1673836861" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1673836861" rel="stylesheet">
+    <link href="/css/auto-complete.css?1673836861" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1673836861" rel="stylesheet">
+    <link href="/css/theme.css?1673836861" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1673836861" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1624844736" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1673836861" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1624844736"></script>
+    <script src="/js/jquery-3.3.1.min.js?1673836861"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1624844736"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1624844736"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1673836861"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1673836861"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1624844736"></script>
+<script type="text/javascript" src="/js/search.js?1673836861"></script>
 
     
   </div>
@@ -82,13 +82,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisites/" title="Chuẩn bị" class="dd-item 
+    <li data-nav-id="/1-prerequisites/" title="Preparation" class="dd-item 
         
         
         
         ">
       <a href="/1-prerequisites/">
-          <b>1. </b>Chuẩn bị
+          <b>1. </b>Preparation
           
             <i class="fas fa-check read-icon"></i>
           
@@ -113,13 +113,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisites/1-create-environment/" title="Chuẩn bị môi trường" class="dd-item 
+    <li data-nav-id="/1-prerequisites/1-create-environment/" title="Prepare Environment" class="dd-item 
         
         
         
         ">
       <a href="/1-prerequisites/1-create-environment/">
-          <b>1.1. </b>Chuẩn bị môi trường
+          <b>1.1. </b>Prepare Environment
           
             <i class="fas fa-check read-icon"></i>
           
@@ -148,13 +148,13 @@
  
   
     
-    <li data-nav-id="/2-configure-release-automation/" title="Cấu hình phát hành tự động" class="dd-item 
+    <li data-nav-id="/2-configure-release-automation/" title="Configure automatic release" class="dd-item 
         
         
         
         ">
       <a href="/2-configure-release-automation/">
-          <b>2. </b>Cấu hình phát hành tự động
+          <b>2. </b>Configure automatic release
           
             <i class="fas fa-check read-icon"></i>
           
@@ -179,13 +179,13 @@
  
   
     
-    <li data-nav-id="/2-configure-release-automation/1-setup-codestar-project/" title="Thiết lập một AWS CodeStar project " class="dd-item 
+    <li data-nav-id="/2-configure-release-automation/1-setup-codestar-project/" title="Configure AWS CodeStar project" class="dd-item 
         
         
         
         ">
       <a href="/2-configure-release-automation/1-setup-codestar-project/">
-          <b>2.1. </b>Thiết lập một AWS CodeStar project 
+          <b>2.1. </b>Configure AWS CodeStar project
           
             <i class="fas fa-check read-icon"></i>
           
@@ -207,13 +207,13 @@
  
   
     
-    <li data-nav-id="/2-configure-release-automation/2-connect-to-codecommit/" title="Kết nối Eclipse IDE với AWS Codecommit" class="dd-item 
+    <li data-nav-id="/2-configure-release-automation/2-connect-to-codecommit/" title="Connect to Eclipse IDE with AWS Codecommit" class="dd-item 
         
         
         
         ">
       <a href="/2-configure-release-automation/2-connect-to-codecommit/">
-          <b>2.2. </b>Kết nối Eclipse IDE với AWS Codecommit
+          <b>2.2. </b>Connect to Eclipse IDE with AWS Codecommit
           
             <i class="fas fa-check read-icon"></i>
           
@@ -242,13 +242,13 @@
  
   
     
-    <li data-nav-id="/3-automate-application-deployment/" title="Triển khai ứng dụng" class="dd-item 
+    <li data-nav-id="/3-automate-application-deployment/" title="Application Deployment" class="dd-item 
         
         
         
         ">
       <a href="/3-automate-application-deployment/">
-          <b>3. </b>Triển khai ứng dụng
+          <b>3. </b>Application Deployment
           
             <i class="fas fa-check read-icon"></i>
           
@@ -273,13 +273,13 @@
  
   
     
-    <li data-nav-id="/3-automate-application-deployment/1-replace-application/" title="Thay thế ứng dụng mẫu" class="dd-item 
+    <li data-nav-id="/3-automate-application-deployment/1-replace-application/" title="Replace sample application" class="dd-item 
         
         
         
         ">
       <a href="/3-automate-application-deployment/1-replace-application/">
-          <b>3.1. </b>Thay thế ứng dụng mẫu
+          <b>3.1. </b>Replace sample application
           
             <i class="fas fa-check read-icon"></i>
           
@@ -301,13 +301,13 @@
  
   
     
-    <li data-nav-id="/3-automate-application-deployment/2-challenge-deploy-through-pipeline/" title="Challenge - Triển khai thông qua Pipeline" class="dd-item 
+    <li data-nav-id="/3-automate-application-deployment/2-challenge-deploy-through-pipeline/" title="Challenge - Deployment via Pipeline" class="dd-item 
         
         
         
         ">
       <a href="/3-automate-application-deployment/2-challenge-deploy-through-pipeline/">
-          <b>3.2. </b>Challenge - Triển khai thông qua Pipeline
+          <b>3.2. </b>Challenge - Deployment via Pipeline
           
             <i class="fas fa-check read-icon"></i>
           
@@ -329,58 +329,18 @@
  
   
     
-    <li data-nav-id="/3-automate-application-deployment/3-problem-determination/" title="Xác định lỗi" class="dd-item 
+    <li data-nav-id="/3-automate-application-deployment/3-problem-determination/" title="Determine error" class="dd-item 
         
         
         
         ">
       <a href="/3-automate-application-deployment/3-problem-determination/">
-          <b>3.3. </b>Xác định lỗi
+          <b>3.3. </b>Determine error
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/3-automate-application-deployment/3-problem-determination/3-python27/" title="Python 2.7 EOS" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/3-automate-application-deployment/3-problem-determination/3-python27/">
-          <b>3.3.1 </b>Python 2.7 EOS
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
               
     </li>
   
@@ -435,13 +395,13 @@
  
   
     
-    <li data-nav-id="/4-deploy-windows-service/1-create-ec2-instance/" title="Tạo máy ảo EC2" class="dd-item 
+    <li data-nav-id="/4-deploy-windows-service/1-create-ec2-instance/" title="Create EC2 instance" class="dd-item 
         
         
         
         ">
       <a href="/4-deploy-windows-service/1-create-ec2-instance/">
-          <b>4.1. </b>Tạo máy ảo EC2
+          <b>4.1. </b>Create EC2 instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -463,13 +423,13 @@
  
   
     
-    <li data-nav-id="/4-deploy-windows-service/2-create-code-deploy-application/" title="Tạo ứng dụng CodeDeploy và Deployment Group" class="dd-item 
+    <li data-nav-id="/4-deploy-windows-service/2-create-code-deploy-application/" title="Create CodeDeploy application and Deployment Group" class="dd-item 
         
         
         
         ">
       <a href="/4-deploy-windows-service/2-create-code-deploy-application/">
-          <b>4.1. </b>Tạo ứng dụng CodeDeploy và Deployment Group
+          <b>4.2. </b>Create CodeDeploy application and Deployment Group
           
             <i class="fas fa-check read-icon"></i>
           
@@ -491,13 +451,13 @@
  
   
     
-    <li data-nav-id="/4-deploy-windows-service/3-create-deployment-s3-bucket/" title="Tạo Triển khai S3 Bucket" class="dd-item 
+    <li data-nav-id="/4-deploy-windows-service/3-create-deployment-s3-bucket/" title="Create S3 Bucket Deployment" class="dd-item 
         
         
         
         ">
       <a href="/4-deploy-windows-service/3-create-deployment-s3-bucket/">
-          <b>4.3. </b>Tạo Triển khai S3 Bucket
+          <b>4.3. </b>Create S3 Bucket Deployment
           
             <i class="fas fa-check read-icon"></i>
           
@@ -519,13 +479,13 @@
  
   
     
-    <li data-nav-id="/4-deploy-windows-service/4-deploy-using-codedeploy/" title="Triển khai ứng dụng sử dụng CodeDeploy" class="dd-item 
+    <li data-nav-id="/4-deploy-windows-service/4-deploy-using-codedeploy/" title="Deploy application using CodeDeploy" class="dd-item 
         
         active
         
         ">
       <a href="/4-deploy-windows-service/4-deploy-using-codedeploy/">
-          <b>4.4. </b>Triển khai ứng dụng sử dụng CodeDeploy
+          <b>4.4. </b>Deploy application using CodeDeploy
           
             <i class="fas fa-check read-icon"></i>
           
@@ -554,13 +514,13 @@
  
   
     
-    <li data-nav-id="/5-monitor-service/" title="Giám sát dịch vụ của bạn" class="dd-item 
+    <li data-nav-id="/5-monitor-service/" title="Monitor your service" class="dd-item 
         
         
         
         ">
       <a href="/5-monitor-service/">
-          <b>5. </b>Giám sát dịch vụ của bạn
+          <b>5. </b>Monitor your service
           
             <i class="fas fa-check read-icon"></i>
           
@@ -585,13 +545,13 @@
  
   
     
-    <li data-nav-id="/5-monitor-service/1-monitor-service/" title="Sử dụng Eclipse IDE" class="dd-item 
+    <li data-nav-id="/5-monitor-service/1-monitor-service/" title="Using Eclipse IDE" class="dd-item 
         
         
         
         ">
       <a href="/5-monitor-service/1-monitor-service/">
-          <b>5.1. </b>Sử dụng Eclipse IDE
+          <b>5.1. </b>Using Eclipse IDE
           
             <i class="fas fa-check read-icon"></i>
           
@@ -613,13 +573,13 @@
  
   
     
-    <li data-nav-id="/5-monitor-service/2-optional-confirm-codedeploy-agent/" title="(Optional) Xác nhận cài đặt CodeDeploy agent " class="dd-item 
+    <li data-nav-id="/5-monitor-service/2-optional-confirm-codedeploy-agent/" title="(Optional) Confirm installation of CodeDeploy agent" class="dd-item 
         
         
         
         ">
       <a href="/5-monitor-service/2-optional-confirm-codedeploy-agent/">
-          <b>5.2. </b>(Optional) Xác nhận cài đặt CodeDeploy agent 
+          <b>5.2. </b>(Optional) Confirm installation of CodeDeploy agent
           
             <i class="fas fa-check read-icon"></i>
           
@@ -641,13 +601,13 @@
  
   
     
-    <li data-nav-id="/5-monitor-service/3-optional-use-sdk-query-elastic-beanstalk/" title="(Optional) Sử dụng SDK để truy vấn Elastic Beanstalk" class="dd-item 
+    <li data-nav-id="/5-monitor-service/3-optional-use-sdk-query-elastic-beanstalk/" title="(Optional) Using the SDK to query Elastic Beanstalk" class="dd-item 
         
         
         
         ">
       <a href="/5-monitor-service/3-optional-use-sdk-query-elastic-beanstalk/">
-          <b>5.3. </b>(Optional) Sử dụng SDK để truy vấn Elastic Beanstalk
+          <b>5.3. </b>(Optional) Using the SDK to query Elastic Beanstalk
           
             <i class="fas fa-check read-icon"></i>
           
@@ -676,13 +636,13 @@
  
   
     
-    <li data-nav-id="/6-challenge/" title="Thử thách" class="dd-item 
+    <li data-nav-id="/6-challenge/" title="Challenge" class="dd-item 
         
         
         
         ">
       <a href="/6-challenge/">
-          <b>6. </b>Thử thách
+          <b>6. </b>Challenge
           
             <i class="fas fa-check read-icon"></i>
           
@@ -702,13 +662,13 @@
  
   
     
-    <li data-nav-id="/7-conclustion/" title="Kết luận" class="dd-item 
+    <li data-nav-id="/7-conclustion/" title="Conclusion" class="dd-item 
         
         
         
         ">
       <a href="/7-conclustion/">
-          <b>7. </b>Kết luận
+          <b>7. </b>Conclusion
           
             <i class="fas fa-check read-icon"></i>
           
@@ -807,6 +767,21 @@
     <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
      
 </left>
+<left>
+    <br>
+    <br>
+        <b> Last Updated </b> <br>
+        <i><font color=orange>15-01-2023</font></i>
+    </left>
+    <left>
+        <br>
+        <br>
+            <b> Team </b> <br>
+           
+            <i>
+                <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng</a>
+        </i>
+        </left>
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
@@ -848,7 +823,7 @@
             
           
           
-            <a href='/'>Cấu hình tự động phát hành ứng dụng</a> > <a href='/4-deploy-windows-service/'>Triển khai Windows Service sử dụng AWS CodeDeploy</a> > Triển khai ứng dụng sử dụng CodeDeploy
+            <a href='/'>Configure app auto-release</a> > <a href='/4-deploy-windows-service/'>Triển khai Windows Service sử dụng AWS CodeDeploy</a> > Deploy application using CodeDeploy
           
         
           
@@ -885,7 +860,7 @@
           
             <h1>
               
-              Triển khai ứng dụng sử dụng CodeDeploy
+              Deploy application using CodeDeploy
             </h1>
           
 
@@ -893,9 +868,9 @@
 
 
 
-	<h4 id="tải-xuống-heartbeat-windows-service-mẫu">Tải xuống Heartbeat Windows Service mẫu</h4>
+	<h4 id="download-sample-heartbeat-windows-service">Download sample Heartbeat Windows Service</h4>
 <ol>
-<li>Nhấp chuột phải và lưu tập tin <strong>CodeDeployHeartbeatDemo.zip</strong>. Giải nén tập tin.</li>
+<li>Right-click and save the file <strong>CodeDeployHeartbeatDemo.zip</strong>. Unzip the file.</li>
 </ol>
 
 <section class="attachments ">
@@ -923,8 +898,8 @@
 </section>
 
 
-<p>Hãy dành một chút thời gian để kiểm tra nội dung của tệp <strong>appspec.yml</strong>. Nó có các nội dung sau:</p>
-<pre><code>os: windows
+<p>Please take a moment to examine the contents of the <strong>appspec.yml</strong> file. It has the following contents:</p>
+<pre tabindex="0"><code>os: windows
 files:
   - source: Heartbeat.dll
     destination: c:\HeartbeatService
@@ -948,23 +923,24 @@ hooks:
       timeout: 30
     - location: copywintail.ps1
       timeout: 30
-
-</code></pre><p>Tệp appspec.yml phác thảo từng tập tin nguồn có trong tập tin nén ZIP vừa giải nén và chỉ định đích trên máy ảo EC2 đích nơi tập tin sẽ được lưu trữ. Việc triển khai này chỉ sử dụng hai lifecycle hooks - ApplicationStop và AfterInstall nhưng bạn có thể sử dụng nhiều hơn nếu trường hợp của bạn yêu cầu. Trong trường hợp này, các tập lệnh powershell (cũng được bao gồm trong kho lưu trữ tệp ZIP) được sử dụng để dừng dịch vụ Windows và hủy đăng ký dịch vụ (nếu nó đã được cài đặt) và sau đó sau khi tất cả các tệp được sao chép, để đăng ký dịch vụ và khởi động nó, và cũng di chuyển trình trợ giúp <em>wintail</em> vào vị trí để hỗ trợ xem tệp nhật ký.</p>
-<h4 id="đẩy-gói-triển-khai-lên-s3-sẵn-sàng-để-triển-khai-bởi-codedeploy">Đẩy gói triển khai lên S3 sẵn sàng để triển khai bởi CodeDeploy</h4>
-<p>Chúng ta đã sẵn sàng để triển khai dịch vụ Heartbeat tới EC2 instance. Chúng ta có các tập tin triển khai trong máy và cần đóng gói chúng lại và đẩy chúng lên S3. Công cụ AWS CLI CodeDeploy sẽ giúp chúng ta hiện việc này.</p>
+</code></pre><p>The appspec.yaml file outlines each source file contained in the unzipped ZIP archive and specifies the destination on the destination EC2 virtual machine where the files will be stored. This implementation uses only two lifecycle hooks - ApplicationStop and AfterInstall but you can use more if your case requires it. In this case, the powershell scripts (also included in the ZIP file archive) are used to stop the Window service and unregister the service (if it is already installed) and then after all files are copied, to register the service and start it, and also move the <em>wintail</em> helper in place to assist in viewing log files.</p>
+<h4 id="push-deployment-packages-to-s3-ready-to-deploy-by-codedeploy">Push deployment packages to S3 ready to deploy by CodeDeploy</h4>
+<p>We are now ready to deploy the Heartbeat service to the EC2 instance. We have the deployment files on our machine and need to package them up and push them to S3. The AWS CLI CodeDeploy tool will help us do this.</p>
 <ol start="2">
-<li>Trong terminal, <em>cd</em> tới thư mục giải nén <strong>CodeDeployHeartbeatDemo</strong>.</li>
-<li>Dùng các lệnh sau để đóng gói các tập tin và đẩy chúng lên S3.</li>
+<li>In terminal, run <code>cd CodeDeployHeartbeatDemo</code> command.</li>
+<li>Use the following commands to pack files and push them to S3.</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">aws deploy push --application-name idevelopDemo --source CodeDeployHeartbeatDemo --profile aws-lab-env --s3-location s3://idevelop-codedeployartefacts-&lt;yourinitials&gt;/CodeDeployHeartbeatDemo.zip 
-</code></pre></div><p>Thay <!-- raw HTML omitted --> bằng tên của bạn giống như tên của bucket đã tạo ở bước trước.
-Nếu thành công, CLI sẽ trả về kết quả <em>To deploy with this revision, run:…</em>, nhưng bạn không nên sử dụng dòng lệnh này, thay vào đó hãy sử dụng câu lệnh được cung cấp ở bước sau.
-<img src="../../../images/4/18.png?width=90pc" alt="UsingCodeDeploy">
-4.  Nhập các lệnh sau vào terminal</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">aws deploy create-deployment --application-name idevelopDemo --deployment-group-name HeartbeatInstances --deployment-config-name CodeDeployDefault.OneAtATime --description <span style="color:#e6db74">&#34;Initial Deployment&#34;</span> --s3-location bucket<span style="color:#f92672">=</span>idevelop-codedeployartefacts-&lt;yourinitials&gt;,key<span style="color:#f92672">=</span>CodeDeployHeartbeatDemo.zip,bundleType<span style="color:#f92672">=</span>zip
-</code></pre></div><p>Thay <!-- raw HTML omitted --> bằng tên của bạn giống như tên của bucket đã tạo ở bước trước.
-Nếu thành công, CLI sẽ trả về <strong>deploymentId</strong>
-<img src="../../../images/4/19.png?width=90pc" alt="UsingCodeDeploy"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aws deploy push --application-name idevelopDemo --source CodeDeployHeartbeatDemo --profile default --s3-location s3://idevelop-codedeployartefacts-&lt;yourinitials&gt;/CodeDeployHeartbeatDemo.zip 
+</span></span></code></pre></div><p>Replace <!-- raw HTML omitted --> with your name the same as the name of the bucket created in the previous step.
+If successful, CLI will return <em>To deploy with this revision, run:…</em>, but you should not use this command line, instead use the command provided in the following step.</p>
+<p><img src="/images/4/18.png?width=90pc" alt="UsingCodeDeploy"></p>
+<ol start="4">
+<li>Enter the following command to terminal.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aws deploy create-deployment --application-name idevelopDemo --deployment-group-name HeartbeatInstances --deployment-config-name CodeDeployDefault.OneAtATime --description <span style="color:#e6db74">&#34;Initial Deployment&#34;</span> --s3-location bucket<span style="color:#f92672">=</span>idevelop-codedeployartefacts-&lt;yourinitials&gt;,key<span style="color:#f92672">=</span>CodeDeployHeartbeatDemo.zip,bundleType<span style="color:#f92672">=</span>zip
+</span></span></code></pre></div><p>Replace <!-- raw HTML omitted --> with your name the same as the name of the bucket created in the previous step.
+If successful, CLI will return <strong>deploymentId</strong></p>
+<p><img src="/images/4/19.png?width=90pc" alt="UsingCodeDeploy"></p>
 
 
 
@@ -1144,26 +1120,8 @@ Nếu thành công, CLI sẽ trả về <strong>deploymentId</strong>
 
                     
                     
-                        
-                    
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
             
         
@@ -1368,10 +1326,10 @@ Nếu thành công, CLI sẽ trả về <strong>deploymentId</strong>
 	 
 	 
 		
-			<a class="nav nav-prev" href="/4-deploy-windows-service/3-create-deployment-s3-bucket/" title="Tạo Triển khai S3 Bucket"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/4-deploy-windows-service/3-create-deployment-s3-bucket/" title="Create S3 Bucket Deployment"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/5-monitor-service/" title="Giám sát dịch vụ của bạn" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/5-monitor-service/" title="Monitor your service" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1381,19 +1339,19 @@ Nếu thành công, CLI sẽ trả về <strong>deploymentId</strong>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1624844736"></script>
-    <script src="/js/perfect-scrollbar.min.js?1624844736"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1624844736"></script>
-    <script src="/js/jquery.sticky.js?1624844736"></script>
-    <script src="/js/featherlight.min.js?1624844736"></script>
-    <script src="/js/highlight.pack.js?1624844736"></script>
+    <script src="/js/clipboard.min.js?1673836861"></script>
+    <script src="/js/perfect-scrollbar.min.js?1673836861"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1673836861"></script>
+    <script src="/js/jquery.sticky.js?1673836861"></script>
+    <script src="/js/featherlight.min.js?1673836861"></script>
+    <script src="/js/highlight.pack.js?1673836861"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1624844736"></script>
-    <script src="/js/learn.js?1624844736"></script>
-    <script src="/js/hugo-learn.js?1624844736"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1673836861"></script>
+    <script src="/js/learn.js?1673836861"></script>
+    <script src="/js/hugo-learn.js?1673836861"></script>
 
-    <link href="/mermaid/mermaid.css?1624844736" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1624844736"></script>
+    <link href="/mermaid/mermaid.css?1673836861" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1673836861"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

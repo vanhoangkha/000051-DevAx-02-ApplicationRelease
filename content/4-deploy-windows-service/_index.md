@@ -1,11 +1,11 @@
 +++
 title = "Triển khai Windows Service sử dụng AWS CodeDeploy"
-date = 2021
+date = 2023
 weight = 4
 chapter = false
 pre = "<b>4. </b>"
 +++
 
-Trong bài thực hành này, bạn sẽ sử dụng AWS CodeDeploy để đẩy một Windows Service lên một nhóm các EC2 instance và để nó tự động triển khai, đăng ký và khởi động.
+In this section, you will use AWS CodeDeploy to push a Windows Service onto a group of EC2 instances and have it automatically deploy, register, and start up.
 
-Windows Service có tên là 'Heartbeat'. Nó ghi *heartbeat* message vào tệp nhật ký theo định kỳ và cũng viết chi tiết về trạng thái đang chạy của nó khi nó chuyển từ trạng thái dừng sang đang chạy và dừng lại để giúp bạn dễ dàng thấy AWS CodeDeploy đang hoạt động khi cập nhật phần mềm. Bạn sẽ không viết code cho bài tập này, tất cả mã biên dịch được cung cấp cho bạn. Thay vào đó, bạn sẽ tập trung vào việc sử dụng AWS CodeDeploy để quản lý việc triển khai cho nhóm.
+Windows Service named 'Heartbeat'. It logs *heartbeat* messages to the log file periodically and also details its running state as it transitions from stopped to running and stops to make it easy for you to see AWS CodeDeploy in action when Software updates. You will not write code for this exercise, all compiled code is provided to you. Instead, you'll focus on using AWS CodeDeploy to manage deployments for your team.

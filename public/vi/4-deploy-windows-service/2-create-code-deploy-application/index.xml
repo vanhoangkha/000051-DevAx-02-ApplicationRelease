@@ -4,10 +4,6 @@
     <title>Tạo ứng dụng CodeDeploy và Deployment Group on DevAx - Chuyển đổi Monoliths sang Microservices - Chuyển đổi Ứng dụng Monolith</title>
     <link>/vi/4-deploy-windows-service/2-create-code-deploy-application/</link>
     <description>Recent content in Tạo ứng dụng CodeDeploy và Deployment Group on DevAx - Chuyển đổi Monoliths sang Microservices - Chuyển đổi Ứng dụng Monolith</description>
-    <generator>Hugo -- gohugo.io</generator>
-    
-	<atom:link href="/vi/4-deploy-windows-service/2-create-code-deploy-application/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <generator>Hugo -- gohugo.io</generator><atom:link href="/vi/4-deploy-windows-service/2-create-code-deploy-application/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

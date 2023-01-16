@@ -1,13 +1,13 @@
 +++
-title = "Kết luận"
-date = 2021
+title = "Conclusion"
+date = 2023
 weight = 7
 chapter = false
 pre = "<b>7. </b>"
 +++
 
-#### Chúc mừng! Bây giờ bạn đã thành công:
+#### Congratulation! Now you have succeeded:
 
-- Sử dụng một ứng dụng java monolithic chạy Spring trong Tomcat trong một môi trường máy tính và thực hiện ‘lift-and-shift’ trên Amazon Elastic Beanstalk PaaS với CI/CD pipeline để tự động cập nhật, sử dụng AWS CodeStar.
-- Sử dụng Eclipse IDE để kết nối và kiểm tra mã nguồn project từ AWS CodeCommit repository được cài đặt bởi AWS CodeStar.
-- Thay đổi mã nguồn, commit và push thay đổi lên AWS CodeCommit và kích hoạt quy trình xây dựng tự động thông qua AWS CodePipeline.
+- Use a monolithic java application running Spring in Tomcat in a desktop environment and perform 'lift-and-shift' on Amazon Elastic Beanstalk PaaS with CI/CD pipeline for auto-update, using AWS CodeStar.
+- Use Eclipse IDE to connect and test project source code from AWS CodeCommit repository installed by AWS CodeStar.
+- Change source code, commit and push changes to AWS CodeCommit, and enable automated builds through AWS CodePipeline.

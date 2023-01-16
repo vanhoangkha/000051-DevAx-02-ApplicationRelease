@@ -1,23 +1,33 @@
 +++
-title = "Challenge - Triển khai thông qua Pipeline"
+title = "Challenge - Deployment via Pipeline"
 weight = 2
 chapter = false
 pre = "<b>3.2. </b>"
 +++
 
-Trong bài tập này, bạn sẽ thực hiện một thay đổi đối với ứng dụng, commit và push những thay đổi đó để kích hoạt quy trình CodePipeline để xây dựng lại và triển khai dự án của bạn vào môi trường Elastic Beanstalk. Dưới đây là các bước hướng dẫn chung mà bạn có thể làm theo để thực hiện thay đổi đối với tệp index.jsp và push thay đổi đó sang git, thao tác này sẽ kích hoạt pipeline CI/CD để xây dựng và triển khai phiên bản mới của ứng dụng.
+In this part, you will make a change to your application, commit and push those changes to trigger CodePipeline process to rebuild and deploy your project to an Elastic Beanstalk environment. Here are the general steps you can follow to make a change to the index.jsp file and push that change to git, which will trigger the CI/CD pipeline to build and deplooy the session's new version of the application.
 
-1. Tạo một nhánh mới.
-![DeployPipeline](../../../images/3/26.png?width=90pc)
-2. Tìm trang index.jsp.
-3. Thay đổi đoạn văn bản hiển thị trên băng chuyền. 
-![DeployPipeline](../../../images/3/27.png?width=90pc)
-4. Commit thay đổi
-5. Chuyển tới nhánh master
-6. Merge các thay đổi
-![DeployPipeline](../../../images/3/28.png?width=90pc)
-7. Đẩy nhánh về điểm gốc
-![DeployPipeline](../../../images/3/29.png?width=90pc)
-8. Truy cập vào lại đường dẫn của ứng dụng khi triển khai những thay đổi đối với môi trường Elastic Beanstalk. Bạn nên nhấp vào các thành phần khác nhau trong bảng điều khiển dự án CodeStar và xem lại các hoạt động đang được thực hiện bởi CodeBuild, CodePipeline và Elastic Beanstalk. 
-9.  Kiểm tra ứng dụng để xác nhận các thay đổi đã được triển khai như mong đợi
-![DeployPipeline](../../../images/3/30.png?width=90pc)
+1. Create new a branch.
+
+![DeployPipeline](/images/3/26.png?width=90pc)
+
+2. Find **index.jsp**.
+3. Change the text displayed.
+
+![DeployPipeline](/images/3/27.png?width=90pc)
+
+4. Commit the change.
+5. Switch to master branch.
+6. Merge the changes.
+
+![DeployPipeline](/images/3/28.png?width=90pc)
+
+7. Push the branch back to the origin.
+
+![DeployPipeline](/images/3/29.png?width=90pc)
+
+8. Re-access the application path when deploying changes to the Elastic Beanstalk environment. You should click on the various components in the CodeStar project dashboard and review the operations being performed by CodeBuild, CodePipeline, and Elastic Beanstalk.
+
+9.  Check the application to confirm the changes have been implemented as expected.
+
+![DeployPipeline](/images/3/30.png?width=90pc)

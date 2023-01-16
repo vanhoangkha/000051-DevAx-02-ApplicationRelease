@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.101.0" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>(Optional) Xác nhận cài đặt CodeDeploy agent  :: DevAx - Chuyển đổi Monoliths sang Microservices - Chuyển đổi Ứng dụng Monolith</title>
 
     
-    <link href="/css/nucleus.css?1624844736" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1624844736" rel="stylesheet">
-    <link href="/css/hybrid.css?1624844736" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1624844736" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1624844736" rel="stylesheet">
-    <link href="/css/auto-complete.css?1624844736" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1624844736" rel="stylesheet">
-    <link href="/css/theme.css?1624844736" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1624844736" rel="stylesheet">
+    <link href="/css/nucleus.css?1673836861" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1673836861" rel="stylesheet">
+    <link href="/css/hybrid.css?1673836861" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1673836861" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1673836861" rel="stylesheet">
+    <link href="/css/auto-complete.css?1673836861" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1673836861" rel="stylesheet">
+    <link href="/css/theme.css?1673836861" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1673836861" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1624844736" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1673836861" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1624844736"></script>
+    <script src="/js/jquery-3.3.1.min.js?1673836861"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1624844736"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1624844736"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1673836861"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1673836861"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1624844736"></script>
+<script type="text/javascript" src="/js/search.js?1673836861"></script>
 
     
   </div>
@@ -341,46 +341,6 @@
           
       </a>
       
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/3-automate-application-deployment/3-problem-determination/3-python27/" title="Python 2.7 EOS" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/3-automate-application-deployment/3-problem-determination/3-python27/">
-          <b>3.3.1 </b>Python 2.7 EOS
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
               
     </li>
   
@@ -469,7 +429,7 @@
         
         ">
       <a href="/vi/4-deploy-windows-service/2-create-code-deploy-application/">
-          <b>4.1. </b>Tạo ứng dụng CodeDeploy và Deployment Group
+          <b>4.2. </b>Tạo ứng dụng CodeDeploy và Deployment Group
           
             <i class="fas fa-check read-icon"></i>
           
@@ -807,6 +767,21 @@
     <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
      
 </left>
+<left>
+    <br>
+    <br>
+        <b> Last Updated </b> <br>
+        <i><font color=orange>15-01-2023</font></i>
+    </left>
+    <left>
+        <br>
+        <br>
+            <b> Team </b> <br>
+           
+            <i>
+                <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng</a>
+        </i>
+        </left>
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
@@ -896,30 +871,45 @@
 	<p>Đây là một bước tùy chọn. Nếu bạn gặp sự cố trong quá trình triển khai, bạn sẽ cần phải điều tra trạng thái của CodeDeploy agent trên các máy ảo. Hoặc ngay cả khi bạn không có bất kỳ vấn đề nào để theo dõi, bạn có thể tìm hiểu xem dịch vụ Heartbeat đang làm gì.
 Để kết nối với các máy ảo Windows bạn phải sử dụng tập tin PEM chứa KeyPair được sinh ra trong quá trình cài đặt, để giải mã mật khẩu Windows, sau đó sử dụng Microsoft Remote Desktop client để kết nối tới máy ảo.</p>
 <ol>
-<li>Truy cập EC2 Management Console. Chọn một trong số 2 máy ảo có gắn thẻ <strong>idevelop</strong>
-<img src="../../../images/5/4.png?width=90pc" alt="OpenEC2Instance"></li>
-<li>Chọn <strong>Connect</strong></li>
+<li>Truy cập EC2 Management Console. Chọn một trong số 2 máy ảo có gắn thẻ <strong>idevelop</strong>.</li>
+<li>Chọn <strong>Connect</strong>.</li>
+</ol>
+<p><img src="/images/5/4.png?width=90pc" alt="OpenEC2Instance"></p>
+<ol start="3">
 <li>Chọn tab <strong>RDP client</strong> và chọn <strong>Download remote desktop file</strong> để tải xuống tập tin RDP.</li>
-<li>Chọn keypair <strong>KPforDevAxInstances</strong> để decrypt mật khẩu của máy ảo Windows.
-<img src="../../../images/5/5.png?width=90pc" alt="ConnecttoEC2Instance">
-Sử dụng mật khẩu và tập tin RDP để truy cập vào máy ảo Windows.</li>
+<li>Ấn <strong>Download remote desktop file</strong></li>
+</ol>
+<p><img src="/images/5/5.png?width=90pc" alt="ConnecttoEC2Instance"></p>
+<ol start="5">
+<li>Chọn keypair <strong>KPforDevAxInstances</strong> để decrypt mật khẩu của máy ảo Windows.</li>
+</ol>
+<ul>
+<li>Ấn <strong>Decrypt password</strong>.</li>
+</ul>
+<p><img src="/images/5/6.png?width=90pc" alt="ConnecttoEC2Instance"></p>
+<ol start="6">
+<li>Copy mật khẩu.</li>
+</ol>
+<p><img src="/images/5/7.png?width=90pc" alt="ConnecttoEC2Instance"></p>
+<p>Sử dụng mật khẩu và tập tin RDP để truy cập vào máy ảo Windows.</p>
+<ol start="7">
 <li>Trong máy ảo Windows, mở tập tin <strong>c:\temp\host-agent-install-log</strong></li>
 <li>Kiểm tra và đảm bảo rằng không có dòng nào có báo lỗi, ví dụ như <em>Failed to connect to server</em> vì đây là một lỗi xảy ra trong quá trình cài đặt.</li>
-<li>Nếu có lỗi xay ra trong quá trình cài đặt, bạn có thể thử tự chạy lại bằng các câu lệnh sau:</li>
+<li>Nếu có lỗi xảy ra trong quá trình cài đặt, bạn có thể thử tự chạy lại bằng các câu lệnh sau:</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">c:<span style="color:#ae81ff">\t</span>emp<span style="color:#ae81ff">\c</span>odedeploy-agent.msi /l*v c:<span style="color:#ae81ff">\t</span>emp<span style="color:#ae81ff">\h</span>ost-agent-install-log.txt
-</code></pre></div><ol start="8">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>c:<span style="color:#ae81ff">\t</span>emp<span style="color:#ae81ff">\c</span>odedeploy-agent.msi /l*v c:<span style="color:#ae81ff">\t</span>emp<span style="color:#ae81ff">\h</span>ost-agent-install-log.txt
+</span></span></code></pre></div><ol start="10">
 <li>Sau khi chạy lại cài đặt, kiểm tra lại tập tin <strong>c:\temp\host-agent-install-log</strong>. Nếu không có lỗi nào được hiển thị, quá trình tạo mới CodeDeploy có khả năng thành công. Bạn có thể tạo mới bằng lệnh AWS CLI:</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">aws deploy create-deployment --application-name idevelopDemo --deployment-group-name HeartbeatInstances --deployment-config-name CodeDeployDefault.AllAtOnce --description <span style="color:#e6db74">&#34;Retrying Initial Deployment&#34;</span> --s3-location bucket<span style="color:#f92672">=</span>idevelop-codedeployartefacts-&lt;yourinitials&gt;,key<span style="color:#f92672">=</span>CodeDeployHearbeatDemo.zip,bundleType<span style="color:#f92672">=</span>zip
-</code></pre></div><p>Thay thế <!-- raw HTML omitted --> bằng tên của bạn sao cho giống với tên S3 bucket bạn đã tạo. Tập tin ZIP sẽ được sao chép tới S3 bucket.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aws deploy create-deployment --application-name idevelopDemo --deployment-group-name HeartbeatInstances --deployment-config-name CodeDeployDefault.AllAtOnce --description <span style="color:#e6db74">&#34;Retrying Initial Deployment&#34;</span> --s3-location bucket<span style="color:#f92672">=</span>idevelop-codedeployartefacts-&lt;yourinitials&gt;,key<span style="color:#f92672">=</span>CodeDeployHearbeatDemo.zip,bundleType<span style="color:#f92672">=</span>zip
+</span></span></code></pre></div><p>Thay thế <!-- raw HTML omitted --> bằng tên của bạn sao cho giống với tên S3 bucket bạn đã tạo. Tập tin ZIP sẽ được sao chép tới S3 bucket.</p>
 <h4 id="xác-nhận-cài-đặt-dịch-vụ-heartbeat-thành-công">Xác nhận cài đặt dịch vụ Heartbeat thành công</h4>
-<p>Giả sử CodeDeploy agent được cài đặt và chạy thành công, và bạn muốn xác nhận việc triển khai dichj vụ Heartbeat thành công, bạn có thể thực hiện các bước sau đây:</p>
-<ol start="9">
+<p>Giả sử CodeDeploy agent được cài đặt và chạy thành công, và bạn muốn xác nhận việc triển khai dịch vụ Heartbeat thành công, bạn có thể thực hiện các bước sau đây:</p>
+<ol>
 <li>Sử dụng Service Control Manager để tìm <strong>AWS Heartbeat Demo Service</strong>. Nếu dịch vụ này hiển thị <em>Running</em> trong SCM, dịch vụ này đã cài đặt thành công.</li>
 <li>Mở thư mục <strong>c:\Logs</strong>. Tập tin <strong>HeartBeatService</strong> trong thư mục sẽ chứa ouput như sau nếu nó khởi chạy thành công:</li>
 </ol>
-<pre><code>[INFO]09/14 08:33:18 - Initialising Heartbeat Service...
+<pre tabindex="0"><code>[INFO]09/14 08:33:18 - Initialising Heartbeat Service...
 [INFO]09/14 08:33:18 - Heartbeat Service is now running...
 [INFO]09/14 08:33:18 - Heartbeat - Deploy has Worked on Tuesday! Iteration 1
 [INFO]09/14 08:33:19 - Heartbeat - Deploy has Worked on Tuesday! Iteration 2
@@ -1104,26 +1094,8 @@ Sử dụng mật khẩu và tập tin RDP để truy cập vào máy ảo Windo
 
                     
                     
-                        
-                    
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
             
         
@@ -1341,19 +1313,19 @@ Sử dụng mật khẩu và tập tin RDP để truy cập vào máy ảo Windo
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1624844736"></script>
-    <script src="/js/perfect-scrollbar.min.js?1624844736"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1624844736"></script>
-    <script src="/js/jquery.sticky.js?1624844736"></script>
-    <script src="/js/featherlight.min.js?1624844736"></script>
-    <script src="/js/highlight.pack.js?1624844736"></script>
+    <script src="/js/clipboard.min.js?1673836861"></script>
+    <script src="/js/perfect-scrollbar.min.js?1673836861"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1673836861"></script>
+    <script src="/js/jquery.sticky.js?1673836861"></script>
+    <script src="/js/featherlight.min.js?1673836861"></script>
+    <script src="/js/highlight.pack.js?1673836861"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1624844736"></script>
-    <script src="/js/learn.js?1624844736"></script>
-    <script src="/js/hugo-learn.js?1624844736"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1673836861"></script>
+    <script src="/js/learn.js?1673836861"></script>
+    <script src="/js/hugo-learn.js?1673836861"></script>
 
-    <link href="/mermaid/mermaid.css?1624844736" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1624844736"></script>
+    <link href="/mermaid/mermaid.css?1673836861" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1673836861"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
