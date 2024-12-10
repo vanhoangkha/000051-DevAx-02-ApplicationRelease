@@ -4,6 +4,8 @@
     <title>Configure AWS CodeStar project on DevAx - Monoliths to Microservices - Migrating the Monolith</title>
     <link>/2-configure-release-automation/1-setup-codestar-project/</link>
     <description>Recent content in Configure AWS CodeStar project on DevAx - Monoliths to Microservices - Migrating the Monolith</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="/2-configure-release-automation/1-setup-codestar-project/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="/2-configure-release-automation/1-setup-codestar-project/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

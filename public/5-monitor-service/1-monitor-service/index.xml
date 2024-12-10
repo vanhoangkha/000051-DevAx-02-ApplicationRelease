@@ -4,6 +4,8 @@
     <title>Using Eclipse IDE on DevAx - Monoliths to Microservices - Migrating the Monolith</title>
     <link>/5-monitor-service/1-monitor-service/</link>
     <description>Recent content in Using Eclipse IDE on DevAx - Monoliths to Microservices - Migrating the Monolith</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="/5-monitor-service/1-monitor-service/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="/5-monitor-service/1-monitor-service/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

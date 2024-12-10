@@ -4,6 +4,8 @@
     <title>Tạo máy ảo EC2 on DevAx - Chuyển đổi Monoliths sang Microservices - Chuyển đổi Ứng dụng Monolith</title>
     <link>/vi/4-deploy-windows-service/1-create-ec2-instance/</link>
     <description>Recent content in Tạo máy ảo EC2 on DevAx - Chuyển đổi Monoliths sang Microservices - Chuyển đổi Ứng dụng Monolith</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="/vi/4-deploy-windows-service/1-create-ec2-instance/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <atom:link href="/vi/4-deploy-windows-service/1-create-ec2-instance/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

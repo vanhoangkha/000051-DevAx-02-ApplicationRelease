@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.101.0" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Configure AWS CodeStar project :: DevAx - Monoliths to Microservices - Migrating the Monolith</title>
 
     
-    <link href="/css/nucleus.css?1673836861" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1673836861" rel="stylesheet">
-    <link href="/css/hybrid.css?1673836861" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1673836861" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1673836861" rel="stylesheet">
-    <link href="/css/auto-complete.css?1673836861" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1673836861" rel="stylesheet">
-    <link href="/css/theme.css?1673836861" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1673836861" rel="stylesheet">
+    <link href="/css/nucleus.css?1733803623" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733803623" rel="stylesheet">
+    <link href="/css/hybrid.css?1733803623" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733803623" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733803623" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733803623" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733803623" rel="stylesheet">
+    <link href="/css/theme.css?1733803623" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733803623" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1673836861" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733803623" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1673836861"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733803623"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1673836861"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1673836861"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733803623"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733803623"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1673836861"></script>
+<script type="text/javascript" src="/js/search.js?1733803623"></script>
 
     
   </div>
@@ -771,7 +771,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>15-01-2023</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -872,23 +872,23 @@
 <ol>
 <li>Access to AWS VPC dashboard.</li>
 </ol>
-<p><img src="/images/2/1.png?width=90pc" alt="VPC"></p>
+<p><img alt="VPC" src="/images/2/1.png?width=90pc"></p>
 <ol start="2">
 <li>Select <strong>Your VPCs</strong>. We should see a VPC named <strong>Module2/DevAxNetworkVPC</strong>.</li>
 </ol>
-<p><img src="/images/2/2.png?width=90pc" alt="VPC"></p>
+<p><img alt="VPC" src="/images/2/2.png?width=90pc"></p>
 <ol start="3">
 <li>Select <strong>Subnets</strong> on the left menu và filter by VPC ID of <strong>Module2/DevAxNetworkVPC</strong> VPC ở menu bên trái và lọc theo VPC ID của VPC <strong>Module2/DevAxNetworkVPC</strong>. We should see 4 subnets - 2 privates and 2 public.</li>
 </ol>
-<p><img src="/images/2/3.png?width=90pc" alt="VPC"></p>
+<p><img alt="VPC" src="/images/2/3.png?width=90pc"></p>
 <ol start="4">
 <li>Open CodeStar dashboard. Select <strong>Create project</strong>.</li>
 </ol>
-<p><img src="/images/2/4.png?width=90pc" alt="NewProjectCodeStar"></p>
+<p><img alt="NewProjectCodeStar" src="/images/2/4.png?width=90pc"></p>
 <ol start="5">
 <li>We should see many project template.</li>
 </ol>
-<p><img src="/images/2/5.png?width=90pc" alt="NewProjectCodeStar"></p>
+<p><img alt="NewProjectCodeStar" src="/images/2/5.png?width=90pc"></p>
 <p>
 <div class="notices warning" ><p>If you see a message related to the missing service role. Select <strong>Create service role</strong></p>
 </div>
@@ -900,12 +900,12 @@
 <li>Java</li>
 </ul>
 <p>This will list the template tags that match the request - select the tag <strong>Java Spring - Web Application</strong></p>
-<p><img src="/images/2/6.png?width=90pc" alt="NewProjectCodeStar"></p>
+<p><img alt="NewProjectCodeStar" src="/images/2/6.png?width=90pc"></p>
 <ol start="7">
 <li>In the next page, enter <strong>TravelBuddy</strong> for <strong>Project name</strong>.</li>
 <li>In repository section, make sure that <strong>CodeCommit</strong> is selected and repository name (<strong>Travel Buddy</strong>) is auto filled.</li>
 </ol>
-<p><img src="/images/2/7.png?width=90pc" alt="NewProjectCodeStar"></p>
+<p><img alt="NewProjectCodeStar" src="/images/2/7.png?width=90pc"></p>
 <ol start="9">
 <li>In <strong>EC2 Configuration</strong> section, select <strong>t3.medium</strong> for Instance Type</li>
 <li>Select <strong>vpc</strong> match the VPC name of the exercise.</li>
@@ -913,24 +913,24 @@
 <li>Select <strong>KPforDevAxInstances</strong> keypair.</li>
 <li>Select <strong>Next</strong></li>
 </ol>
-<p><img src="/images/2/8.png?width=90pc" alt="NewProjectCodeStar"></p>
+<p><img alt="NewProjectCodeStar" src="/images/2/8.png?width=90pc"></p>
 <ol start="14">
 <li>Select <strong>Create Project</strong></li>
 </ol>
-<p><img src="/images/2/9.png?width=90pc" alt="NewProjectCodeStar"></p>
+<p><img alt="NewProjectCodeStar" src="/images/2/9.png?width=90pc"></p>
 <ol start="15">
 <li>The CodeStar will start creating a pipeline. After a few minutes, the new project is displayed.</li>
 </ol>
-<p><img src="/images/2/10.png?width=90pc" alt="NewProjectCodeStar"></p>
+<p><img alt="NewProjectCodeStar" src="/images/2/10.png?width=90pc"></p>
 <ol start="16">
 <li>While waiting for project creation completed, explore the IDE tab and learn how to access the project source code.</li>
 </ol>
-<p><img src="/images/2/11.png?width=90pc" alt="NewProjectCodeStar"></p>
+<p><img alt="NewProjectCodeStar" src="/images/2/11.png?width=90pc"></p>
 <ol start="17">
 <li>On the left menu, select <strong>Team</strong>.</li>
 <li>Select <strong>Add team member</strong>.</li>
 </ol>
-<p><img src="/images/2/12.png?width=90pc" alt="Addmember"></p>
+<p><img alt="Addmember" src="/images/2/12.png?width=90pc"></p>
 <ol start="19">
 <li>We will add an existing user <strong>awsstudent</strong>. In the <strong>Select user</strong> section, select <strong>awsstudent</strong></li>
 <li>CodeStar requires members to have an email address. Therefore, remember to add an email address for the user.</li>
@@ -938,71 +938,71 @@
 <li>Select <strong>Remote Access</strong>.</li>
 <li>Click <strong>Add team member</strong>.</li>
 </ol>
-<p><img src="/images/2/13.png?width=90pc" alt="Addmember"></p>
+<p><img alt="Addmember" src="/images/2/13.png?width=90pc"></p>
 <ol start="24">
 <li>Next, we will create a new user. Click <strong>Add team member</strong>.</li>
 <li>In <strong>User</strong> section, select <strong>Create new IAM user</strong>. This will redirect you to IAM Management to create a user.</li>
 </ol>
-<p><img src="/images/2/16.png?width=90pc" alt="CreateNewMember"></p>
+<p><img alt="CreateNewMember" src="/images/2/16.png?width=90pc"></p>
 <ol start="26">
 <li>In IAM Management Console, enter <code>user-lab02</code> for username, select both access types: <strong>Programmatic access</strong> and <strong>AWS Management Console access</strong>.</li>
 <li>Click <strong>Next: Permissions</strong>.</li>
 </ol>
-<p><img src="/images/2/17.png?width=90pc" alt="CreateNewMember"></p>
+<p><img alt="CreateNewMember" src="/images/2/17.png?width=90pc"></p>
 <ol start="28">
 <li>Select <strong>Attach existing policies directly</strong> and select <strong>AdministratorAccess</strong>.</li>
 </ol>
 <ul>
 <li>Chọn <strong>Next: Tags</strong></li>
 </ul>
-<p><img src="/images/2/18.png?width=90pc" alt="CreateNewMember"></p>
+<p><img alt="CreateNewMember" src="/images/2/18.png?width=90pc"></p>
 <ol start="29">
 <li>Click <strong>Next: Tags</strong>, tag the user if needed or click <strong>Next: Review</strong> to review the configure.</li>
 </ol>
-<p><img src="/images/2/19.png?width=90pc" alt="CreateNewMember"></p>
+<p><img alt="CreateNewMember" src="/images/2/19.png?width=90pc"></p>
 <ol start="30">
 <li>Click <strong>Create User</strong> and</li>
 </ol>
-<p><img src="/images/2/20.png?width=90pc" alt="CreateNewMember"></p>
+<p><img alt="CreateNewMember" src="/images/2/20.png?width=90pc"></p>
 <ol start="31">
 <li>Click <strong>Download .csv file</strong> to download file that contains a secret key and an access key.This information will be used in the following part.</li>
 </ol>
 <ul>
 <li>Click <strong>Close</strong> and back to CodeStar page.</li>
 </ul>
-<p><img src="/images/2/21.png?width=90pc" alt="CreateNewMember"></p>
+<p><img alt="CreateNewMember" src="/images/2/21.png?width=90pc"></p>
 <ol start="32">
 <li>Click <em>refresh</em> symbol to refresh user list, select <strong>user-lab02</strong> just created</li>
 <li>Enter email for user, select <strong>Owner</strong> in <strong>Project role</strong> section, tick <strong>Remote Access</strong> and click <strong>Add team member</strong> .</li>
 </ol>
-<p><img src="/images/2/22.png?width=90pc" alt="AddNewMember"></p>
+<p><img alt="AddNewMember" src="/images/2/22.png?width=90pc"></p>
 <ol start="34">
 <li>Now, we will create credentials to use for Codecommit for the newly created user. Access to <strong>IAM</strong> console. Select <strong>Users</strong> on the left menu.</li>
 <li>Click newly created user</li>
 </ol>
-<p><img src="/images/2/23.png?width=90pc" alt="CredentialforCodecommit"></p>
+<p><img alt="CredentialforCodecommit" src="/images/2/23.png?width=90pc"></p>
 <ol start="36">
 <li>Select <strong>Security Credentials</strong> tab.</li>
 </ol>
-<p><img src="/images/2/24.png?width=90pc" alt="CredentialforCodecommit"></p>
+<p><img alt="CredentialforCodecommit" src="/images/2/24.png?width=90pc"></p>
 <ol start="37">
 <li>Scroll down to <strong>HTTPS Git credentials for AWS CodeCommit</strong> section and click <strong>Generate Credentials</strong></li>
 </ol>
-<p><img src="/images/2/25.png?width=90pc" alt="CredentialforCodecommit"></p>
+<p><img alt="CredentialforCodecommit" src="/images/2/25.png?width=90pc"></p>
 <ol start="38">
 <li>Click <strong>Download credentials</strong>, then click <strong>Close</strong>.</li>
 </ol>
-<p><img src="/images/2/25.png?width=90pc" alt="CredentialforCodecommit"></p>
+<p><img alt="CredentialforCodecommit" src="/images/2/25.png?width=90pc"></p>
 <p>CodeStar has now configured a CI/CD pipeline to deliver our project artefact to a public Elastic Beanstalk PaaS web server. This will take a few minutes, check the link in the path and click this link and check the your new java HelloWorld application has been created.</p>
 <ol start="39">
 <li>Access <strong>CodeStar</strong> and select <strong>Projects</strong></li>
 <li>Select <strong>TravelBuddy</strong>, then select <strong>Pipeline</strong> tab. Bạn sẽ thấy 3 giai đoạn được tạo <strong>Source, Build và Deploy.</strong></li>
 </ol>
-<p><img src="/images/2/26.png?width=90pc" alt="CodeStarProject"></p>
+<p><img alt="CodeStarProject" src="/images/2/26.png?width=90pc"></p>
 <ol start="41">
 <li>You can click <strong>View application</strong> in the upper right corner to access to your running application.</li>
 </ol>
-<p><img src="/images/2/27.png?width=90pc" alt="CodeStarProject"></p>
+<p><img alt="CodeStarProject" src="/images/2/27.png?width=90pc"></p>
 
 
 
@@ -1398,19 +1398,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1673836861"></script>
-    <script src="/js/perfect-scrollbar.min.js?1673836861"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1673836861"></script>
-    <script src="/js/jquery.sticky.js?1673836861"></script>
-    <script src="/js/featherlight.min.js?1673836861"></script>
-    <script src="/js/highlight.pack.js?1673836861"></script>
+    <script src="/js/clipboard.min.js?1733803623"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733803623"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733803623"></script>
+    <script src="/js/jquery.sticky.js?1733803623"></script>
+    <script src="/js/featherlight.min.js?1733803623"></script>
+    <script src="/js/highlight.pack.js?1733803623"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1673836861"></script>
-    <script src="/js/learn.js?1673836861"></script>
-    <script src="/js/hugo-learn.js?1673836861"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733803623"></script>
+    <script src="/js/learn.js?1733803623"></script>
+    <script src="/js/hugo-learn.js?1733803623"></script>
 
-    <link href="/mermaid/mermaid.css?1673836861" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1673836861"></script>
+    <link href="/mermaid/mermaid.css?1733803623" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733803623"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

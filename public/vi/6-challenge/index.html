@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.101.0" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Thử thách :: DevAx - Chuyển đổi Monoliths sang Microservices - Chuyển đổi Ứng dụng Monolith</title>
 
     
-    <link href="/css/nucleus.css?1673836861" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1673836861" rel="stylesheet">
-    <link href="/css/hybrid.css?1673836861" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1673836861" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1673836861" rel="stylesheet">
-    <link href="/css/auto-complete.css?1673836861" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1673836861" rel="stylesheet">
-    <link href="/css/theme.css?1673836861" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1673836861" rel="stylesheet">
+    <link href="/css/nucleus.css?1733803623" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733803623" rel="stylesheet">
+    <link href="/css/hybrid.css?1733803623" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733803623" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733803623" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733803623" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733803623" rel="stylesheet">
+    <link href="/css/theme.css?1733803623" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733803623" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1673836861" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733803623" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1673836861"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733803623"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1673836861"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1673836861"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733803623"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733803623"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/vi";
+        var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1673836861"></script>
+<script type="text/javascript" src="/js/search.js?1733803623"></script>
 
     
   </div>
@@ -771,7 +771,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>15-01-2023</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -858,110 +858,110 @@
 <p>Trong thử thách này, bạn sẽ thực hiện một thay đổi đối với ứng dụng BeanstalkManager để tạo tự động một ứng dụng Elastic Beanstalk, Môi trường và Version. Đây là những tác vụ được CodePipeline hoàn thành khi bạn chọn Elastic Beanstalk để triển khai. Điều này sẽ cung cấp cho bạn một số hiểu biết về lợi ích của việc sử dụng Công cụ dành cho nhà phát triển AWS để cung cấp và triển khai các ứng dụng của bạn cũng như các tính năng mạnh mẽ mà chúng cung cấp.
 Để bắt đầu, bạn có thể tham khảo tài liệu Java SDK tại đường dẫn <a href="http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/elasticbeanstalk/AWSElasticBeanstalkClient.html">http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/elasticbeanstalk/AWSElasticBeanstalkClient.html</a></p>
 <p>Bạn sẽ cần tạo một ứng dụng</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">CreateApp</span><span style="color:#f92672">()</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>	CreateApplicationRequest request <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> CreateApplicationRequest<span style="color:#f92672">()</span>
-</span></span><span style="display:flex;"><span>			<span style="color:#f92672">.</span><span style="color:#a6e22e">withApplicationName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;my-app&#34;</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>			<span style="color:#f92672">.</span><span style="color:#a6e22e">withDescription</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;my application&#34;</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>	CreateApplicationResult response <span style="color:#f92672">=</span> eb<span style="color:#f92672">.</span><span style="color:#a6e22e">createApplication</span><span style="color:#f92672">(</span>request<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>	System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;my-app created!&#34;</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>	System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span>response<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">CreateApp</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	CreateApplicationRequest request <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> CreateApplicationRequest()
+</span></span><span style="display:flex;"><span>			.<span style="color:#a6e22e">withApplicationName</span>(<span style="color:#e6db74">&#34;my-app&#34;</span>)
+</span></span><span style="display:flex;"><span>			.<span style="color:#a6e22e">withDescription</span>(<span style="color:#e6db74">&#34;my application&#34;</span>);
+</span></span><span style="display:flex;"><span>	CreateApplicationResult response <span style="color:#f92672">=</span> eb.<span style="color:#a6e22e">createApplication</span>(request);
+</span></span><span style="display:flex;"><span>	System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(<span style="color:#e6db74">&#34;my-app created!&#34;</span>);
+</span></span><span style="display:flex;"><span>	System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(response);
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Tiếp theo, bạn sẽ cần phải đóng gói artifact triển khai của mình (có thể là trang TravelBuddy mà chúng tôi đang sử dụng hoặc bạn có thể tạo ứng dụng web java của riêng mình) và tải tệp WAR đó lên S3. Bạn đã học cách tải tệp lên bộ chứa S3 theo chương trình trong bài thực hành đầu tiên của khóa học này.
 Trong phần hướng dẫn dưới đây, tập tin <strong>sample.war</strong> là một ứng dụng java đã được đóng gói và tải lên S3 bucket có tên <strong>mybucket1234567890</strong>.
 Để tạo một instance trong Elastic Beanstalk, ta viết hàm CreateAppVersion() như sau:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> CreateApplicationRequest <span style="color:#a6e22e">withApplicationName</span><span style="color:#f92672">(</span>String string<span style="color:#f92672">)</span> 
-</span></span><span style="display:flex;"><span><span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">CreateAppVersion</span><span style="color:#f92672">()</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>	CreateApplicationVersionRequest request <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> CreateApplicationVersionRequest<span style="color:#f92672">()</span>
-</span></span><span style="display:flex;"><span>			<span style="color:#f92672">.</span><span style="color:#a6e22e">withApplicationName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;my-app&#34;</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>			<span style="color:#f92672">.</span><span style="color:#a6e22e">withAutoCreateApplication</span><span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>			<span style="color:#f92672">.</span><span style="color:#a6e22e">withDescription</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;my-app-v1&#34;</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>			<span style="color:#f92672">.</span><span style="color:#a6e22e">withProcess</span><span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>			<span style="color:#f92672">.</span><span style="color:#a6e22e">withSourceBundle</span><span style="color:#f92672">(</span>
-</span></span><span style="display:flex;"><span>					<span style="color:#66d9ef">new</span> S3Location<span style="color:#f92672">().</span><span style="color:#a6e22e">withS3Bucket</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;mybucket1234567890&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">withS3Key</span><span style="color:#f92672">(</span>
-</span></span><span style="display:flex;"><span>							<span style="color:#e6db74">&#34;sample.war&#34;</span><span style="color:#f92672">)).</span><span style="color:#a6e22e">withVersionLabel</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;v1&#34;</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>	CreateApplicationVersionResult response <span style="color:#f92672">=</span> eb<span style="color:#f92672">.</span><span style="color:#a6e22e">createApplicationVersion</span><span style="color:#f92672">(</span>request<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> CreateApplicationRequest <span style="color:#a6e22e">withApplicationName</span>(String string) 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">CreateAppVersion</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	CreateApplicationVersionRequest request <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> CreateApplicationVersionRequest()
+</span></span><span style="display:flex;"><span>			.<span style="color:#a6e22e">withApplicationName</span>(<span style="color:#e6db74">&#34;my-app&#34;</span>)
+</span></span><span style="display:flex;"><span>			.<span style="color:#a6e22e">withAutoCreateApplication</span>(<span style="color:#66d9ef">true</span>)
+</span></span><span style="display:flex;"><span>			.<span style="color:#a6e22e">withDescription</span>(<span style="color:#e6db74">&#34;my-app-v1&#34;</span>)
+</span></span><span style="display:flex;"><span>			.<span style="color:#a6e22e">withProcess</span>(<span style="color:#66d9ef">true</span>)
+</span></span><span style="display:flex;"><span>			.<span style="color:#a6e22e">withSourceBundle</span>(
+</span></span><span style="display:flex;"><span>					<span style="color:#66d9ef">new</span> S3Location().<span style="color:#a6e22e">withS3Bucket</span>(<span style="color:#e6db74">&#34;mybucket1234567890&#34;</span>).<span style="color:#a6e22e">withS3Key</span>(
+</span></span><span style="display:flex;"><span>							<span style="color:#e6db74">&#34;sample.war&#34;</span>)).<span style="color:#a6e22e">withVersionLabel</span>(<span style="color:#e6db74">&#34;v1&#34;</span>);
+</span></span><span style="display:flex;"><span>	CreateApplicationVersionResult response <span style="color:#f92672">=</span> eb.<span style="color:#a6e22e">createApplicationVersion</span>(request);
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Import thêm các thư viện cần thiết</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> com.amazonaws.services.elasticbeanstalk.model.CreateApplicationRequest<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.amazonaws.services.elasticbeanstalk.model.CreateApplicationResult<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.amazonaws.services.elasticbeanstalk.model.CreateApplicationVersionRequest<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.amazonaws.services.elasticbeanstalk.model.CreateApplicationVersionResult<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.amazonaws.services.elasticbeanstalk.model.S3Location<span style="color:#f92672">;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> com.amazonaws.services.elasticbeanstalk.model.CreateApplicationRequest;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.amazonaws.services.elasticbeanstalk.model.CreateApplicationResult;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.amazonaws.services.elasticbeanstalk.model.CreateApplicationVersionRequest;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.amazonaws.services.elasticbeanstalk.model.CreateApplicationVersionResult;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.amazonaws.services.elasticbeanstalk.model.S3Location;
 </span></span></code></pre></div><p>Tiếp theo, ta cần tạo môi trường cho ứng dụng này.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">CreateEnviroment</span><span style="color:#f92672">()</span> 
-</span></span><span style="display:flex;"><span><span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>	ConfigurationOptionSetting cos <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ConfigurationOptionSetting<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;aws:autoscaling:launchconfiguration&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;IamInstanceProfile&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;aws-elasticbeanstalk-ec2-role&#34;</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>	CreateEnvironmentRequest request <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> CreateEnvironmentRequest<span style="color:#f92672">()</span>
-</span></span><span style="display:flex;"><span>			<span style="color:#f92672">.</span><span style="color:#a6e22e">withApplicationName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;my-app&#34;</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>			<span style="color:#f92672">.</span><span style="color:#a6e22e">withEnvironmentName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;env-my-app&#34;</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>			<span style="color:#f92672">.</span><span style="color:#a6e22e">withSolutionStackName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;64bit Amazon Linux 2 v3.1.7 running Corretto 8&#34;</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>			<span style="color:#f92672">.</span><span style="color:#a6e22e">withOptionSettings</span><span style="color:#f92672">(</span>cos<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>	CreateEnvironmentResult response <span style="color:#f92672">=</span> eb<span style="color:#f92672">.</span><span style="color:#a6e22e">createEnvironment</span><span style="color:#f92672">(</span>request<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>	System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span>response<span style="color:#f92672">);</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">CreateEnviroment</span>() 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	ConfigurationOptionSetting cos <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ConfigurationOptionSetting(<span style="color:#e6db74">&#34;aws:autoscaling:launchconfiguration&#34;</span>,<span style="color:#e6db74">&#34;IamInstanceProfile&#34;</span>,<span style="color:#e6db74">&#34;aws-elasticbeanstalk-ec2-role&#34;</span>);
+</span></span><span style="display:flex;"><span>	CreateEnvironmentRequest request <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> CreateEnvironmentRequest()
+</span></span><span style="display:flex;"><span>			.<span style="color:#a6e22e">withApplicationName</span>(<span style="color:#e6db74">&#34;my-app&#34;</span>)
+</span></span><span style="display:flex;"><span>			.<span style="color:#a6e22e">withEnvironmentName</span>(<span style="color:#e6db74">&#34;env-my-app&#34;</span>)
+</span></span><span style="display:flex;"><span>			.<span style="color:#a6e22e">withSolutionStackName</span>(<span style="color:#e6db74">&#34;64bit Amazon Linux 2 v3.1.7 running Corretto 8&#34;</span>)
+</span></span><span style="display:flex;"><span>			.<span style="color:#a6e22e">withOptionSettings</span>(cos);
+</span></span><span style="display:flex;"><span>	CreateEnvironmentResult response <span style="color:#f92672">=</span> eb.<span style="color:#a6e22e">createEnvironment</span>(request);
+</span></span><span style="display:flex;"><span>	System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(response);
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Và import các thư viện sau:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> com.amazonaws.services.elasticbeanstalk.model.ConfigurationOptionSetting<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.amazonaws.services.elasticbeanstalk.model.CreateEnvironmentRequest<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.amazonaws.services.elasticbeanstalk.model.CreateEnvironmentResult<span style="color:#f92672">;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> com.amazonaws.services.elasticbeanstalk.model.ConfigurationOptionSetting;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.amazonaws.services.elasticbeanstalk.model.CreateEnvironmentRequest;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.amazonaws.services.elasticbeanstalk.model.CreateEnvironmentResult;
 </span></span></code></pre></div><p>Ta có toàn bộ các thư viện cần import:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> com.amazonaws.services.elasticbeanstalk.model.CreateApplicationRequest<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.amazonaws.services.elasticbeanstalk.model.CreateApplicationResult<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.amazonaws.services.elasticbeanstalk.model.CreateApplicationVersionRequest<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.amazonaws.services.elasticbeanstalk.model.CreateApplicationVersionResult<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.amazonaws.services.elasticbeanstalk.model.S3Location<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.amazonaws.services.elasticbeanstalk.model.ConfigurationOptionSetting<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.amazonaws.services.elasticbeanstalk.model.CreateEnvironmentRequest<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.amazonaws.services.elasticbeanstalk.model.CreateEnvironmentResult<span style="color:#f92672">;</span>
-</span></span></code></pre></div><p><img src="/images/6/1.png?width=90pc" alt="Challenge"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> com.amazonaws.services.elasticbeanstalk.model.CreateApplicationRequest;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.amazonaws.services.elasticbeanstalk.model.CreateApplicationResult;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.amazonaws.services.elasticbeanstalk.model.CreateApplicationVersionRequest;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.amazonaws.services.elasticbeanstalk.model.CreateApplicationVersionResult;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.amazonaws.services.elasticbeanstalk.model.S3Location;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.amazonaws.services.elasticbeanstalk.model.ConfigurationOptionSetting;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.amazonaws.services.elasticbeanstalk.model.CreateEnvironmentRequest;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.amazonaws.services.elasticbeanstalk.model.CreateEnvironmentResult;
+</span></span></code></pre></div><p><img alt="Challenge" src="/images/6/1.png?width=90pc"></p>
 <p>Và toàn bộ đoạn code tạo Application và Environment như sau:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">CreateApp</span><span style="color:#f92672">(){</span>
-</span></span><span style="display:flex;"><span>	CreateApplicationRequest request <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> CreateApplicationRequest<span style="color:#f92672">()</span>
-</span></span><span style="display:flex;"><span>			<span style="color:#f92672">.</span><span style="color:#a6e22e">withApplicationName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;my-app&#34;</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>			<span style="color:#f92672">.</span><span style="color:#a6e22e">withDescription</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;my application&#34;</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>	CreateApplicationResult response <span style="color:#f92672">=</span> eb<span style="color:#f92672">.</span><span style="color:#a6e22e">createApplication</span><span style="color:#f92672">(</span>request<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>	System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;my-app created!&#34;</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>	System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span>response<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">private</span> CreateApplicationRequest <span style="color:#a6e22e">withApplicationName</span><span style="color:#f92672">(</span>String string<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">CreateAppVersion</span><span style="color:#f92672">()</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>	CreateApplicationVersionRequest request <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> CreateApplicationVersionRequest<span style="color:#f92672">()</span>
-</span></span><span style="display:flex;"><span>			<span style="color:#f92672">.</span><span style="color:#a6e22e">withApplicationName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;my-app&#34;</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>			<span style="color:#f92672">.</span><span style="color:#a6e22e">withAutoCreateApplication</span><span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>			<span style="color:#f92672">.</span><span style="color:#a6e22e">withDescription</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;my-app-v1&#34;</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>			<span style="color:#f92672">.</span><span style="color:#a6e22e">withProcess</span><span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>			<span style="color:#f92672">.</span><span style="color:#a6e22e">withSourceBundle</span><span style="color:#f92672">(</span>
-</span></span><span style="display:flex;"><span>					<span style="color:#66d9ef">new</span> S3Location<span style="color:#f92672">().</span><span style="color:#a6e22e">withS3Bucket</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;mybuckt1234567890&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">withS3Key</span><span style="color:#f92672">(</span>
-</span></span><span style="display:flex;"><span>							<span style="color:#e6db74">&#34;sample.war&#34;</span><span style="color:#f92672">)).</span><span style="color:#a6e22e">withVersionLabel</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;v1&#34;</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>	CreateApplicationVersionResult response <span style="color:#f92672">=</span> eb<span style="color:#f92672">.</span><span style="color:#a6e22e">createApplicationVersion</span><span style="color:#f92672">(</span>request<span style="color:#f92672">);</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">CreateApp</span>(){
+</span></span><span style="display:flex;"><span>	CreateApplicationRequest request <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> CreateApplicationRequest()
+</span></span><span style="display:flex;"><span>			.<span style="color:#a6e22e">withApplicationName</span>(<span style="color:#e6db74">&#34;my-app&#34;</span>)
+</span></span><span style="display:flex;"><span>			.<span style="color:#a6e22e">withDescription</span>(<span style="color:#e6db74">&#34;my application&#34;</span>);
+</span></span><span style="display:flex;"><span>	CreateApplicationResult response <span style="color:#f92672">=</span> eb.<span style="color:#a6e22e">createApplication</span>(request);
+</span></span><span style="display:flex;"><span>	System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(<span style="color:#e6db74">&#34;my-app created!&#34;</span>);
+</span></span><span style="display:flex;"><span>	System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(response);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">private</span> CreateApplicationRequest <span style="color:#a6e22e">withApplicationName</span>(String string) {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">CreateAppVersion</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	CreateApplicationVersionRequest request <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> CreateApplicationVersionRequest()
+</span></span><span style="display:flex;"><span>			.<span style="color:#a6e22e">withApplicationName</span>(<span style="color:#e6db74">&#34;my-app&#34;</span>)
+</span></span><span style="display:flex;"><span>			.<span style="color:#a6e22e">withAutoCreateApplication</span>(<span style="color:#66d9ef">true</span>)
+</span></span><span style="display:flex;"><span>			.<span style="color:#a6e22e">withDescription</span>(<span style="color:#e6db74">&#34;my-app-v1&#34;</span>)
+</span></span><span style="display:flex;"><span>			.<span style="color:#a6e22e">withProcess</span>(<span style="color:#66d9ef">true</span>)
+</span></span><span style="display:flex;"><span>			.<span style="color:#a6e22e">withSourceBundle</span>(
+</span></span><span style="display:flex;"><span>					<span style="color:#66d9ef">new</span> S3Location().<span style="color:#a6e22e">withS3Bucket</span>(<span style="color:#e6db74">&#34;mybuckt1234567890&#34;</span>).<span style="color:#a6e22e">withS3Key</span>(
+</span></span><span style="display:flex;"><span>							<span style="color:#e6db74">&#34;sample.war&#34;</span>)).<span style="color:#a6e22e">withVersionLabel</span>(<span style="color:#e6db74">&#34;v1&#34;</span>);
+</span></span><span style="display:flex;"><span>	CreateApplicationVersionResult response <span style="color:#f92672">=</span> eb.<span style="color:#a6e22e">createApplicationVersion</span>(request);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">CreateEnviroment</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>	ConfigurationOptionSetting cos <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ConfigurationOptionSetting<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;aws:autoscaling:launchconfiguration&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;IamInstanceProfile&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;aws-elasticbeanstalk-ec2-role&#34;</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>	CreateEnvironmentRequest request <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> CreateEnvironmentRequest<span style="color:#f92672">()</span>
-</span></span><span style="display:flex;"><span>			<span style="color:#f92672">.</span><span style="color:#a6e22e">withApplicationName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;my-app&#34;</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>			<span style="color:#f92672">.</span><span style="color:#a6e22e">withEnvironmentName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;env-my-app&#34;</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>			<span style="color:#f92672">.</span><span style="color:#a6e22e">withSolutionStackName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;64bit Amazon Linux 2 v3.1.7 running Corretto 8&#34;</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>			<span style="color:#f92672">.</span><span style="color:#a6e22e">withOptionSettings</span><span style="color:#f92672">(</span>cos<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>	CreateEnvironmentResult response <span style="color:#f92672">=</span> eb<span style="color:#f92672">.</span><span style="color:#a6e22e">createEnvironment</span><span style="color:#f92672">(</span>request<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>	System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span>response<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">CreateEnviroment</span>() {
+</span></span><span style="display:flex;"><span>	ConfigurationOptionSetting cos <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ConfigurationOptionSetting(<span style="color:#e6db74">&#34;aws:autoscaling:launchconfiguration&#34;</span>,<span style="color:#e6db74">&#34;IamInstanceProfile&#34;</span>,<span style="color:#e6db74">&#34;aws-elasticbeanstalk-ec2-role&#34;</span>);
+</span></span><span style="display:flex;"><span>	CreateEnvironmentRequest request <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> CreateEnvironmentRequest()
+</span></span><span style="display:flex;"><span>			.<span style="color:#a6e22e">withApplicationName</span>(<span style="color:#e6db74">&#34;my-app&#34;</span>)
+</span></span><span style="display:flex;"><span>			.<span style="color:#a6e22e">withEnvironmentName</span>(<span style="color:#e6db74">&#34;env-my-app&#34;</span>)
+</span></span><span style="display:flex;"><span>			.<span style="color:#a6e22e">withSolutionStackName</span>(<span style="color:#e6db74">&#34;64bit Amazon Linux 2 v3.1.7 running Corretto 8&#34;</span>)
+</span></span><span style="display:flex;"><span>			.<span style="color:#a6e22e">withOptionSettings</span>(cos);
+</span></span><span style="display:flex;"><span>	CreateEnvironmentResult response <span style="color:#f92672">=</span> eb.<span style="color:#a6e22e">createEnvironment</span>(request);
+</span></span><span style="display:flex;"><span>	System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(response);
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><p><img src="/images/6/2.png?width=90pc" alt="Challenge"></p>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><img alt="Challenge" src="/images/6/2.png?width=90pc"></p>
 <p>Gọi hai hàm này trong tập tin Application.java</p>
-<p><img src="/images/6/3.png?width=90pc" alt="Challenge"></p>
+<p><img alt="Challenge" src="/images/6/3.png?width=90pc"></p>
 <p>Dùng lệnh <strong>mvn install</strong> hoặc chọn <strong>Ctrl + F11</strong> để khởi chạy chương trình. Sau khi chạy thành công, ta được một ứng dụng <strong>my-app</strong> được triển khai trên môi trường <strong>env-my-app</strong>.</p>
-<p><img src="/images/6/4.png?width=90pc" alt="Challenge"></p>
-<p><img src="/images/6/5.png?width=90pc" alt="Challenge"></p>
+<p><img alt="Challenge" src="/images/6/4.png?width=90pc"></p>
+<p><img alt="Challenge" src="/images/6/5.png?width=90pc"></p>
 <p>Nếu gặp lỗi trong quá trình chạy chương trình liên quan tới tạo môi trường cho ứng dụng tương tự như <em>SolutionStackName 64bit Amazon Linux 2 v3.1.7 running Corretto 8 not found</em>, bạn cần cập nhật Solution Stack Name.
 Mở CLI và chạy lệnh <code>aws elasticbeanstalk list-available-solution-stacks |grep Corretto</code> để liệt kê các Solution Stack Name corretto hiện có. Chọn Solution Stack Name Coretto 8 phù hợp</p>
 
@@ -1358,19 +1358,19 @@ Mở CLI và chạy lệnh <code>aws elasticbeanstalk list-available-solution-st
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1673836861"></script>
-    <script src="/js/perfect-scrollbar.min.js?1673836861"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1673836861"></script>
-    <script src="/js/jquery.sticky.js?1673836861"></script>
-    <script src="/js/featherlight.min.js?1673836861"></script>
-    <script src="/js/highlight.pack.js?1673836861"></script>
+    <script src="/js/clipboard.min.js?1733803623"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733803623"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733803623"></script>
+    <script src="/js/jquery.sticky.js?1733803623"></script>
+    <script src="/js/featherlight.min.js?1733803623"></script>
+    <script src="/js/highlight.pack.js?1733803623"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1673836861"></script>
-    <script src="/js/learn.js?1673836861"></script>
-    <script src="/js/hugo-learn.js?1673836861"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733803623"></script>
+    <script src="/js/learn.js?1733803623"></script>
+    <script src="/js/hugo-learn.js?1733803623"></script>
 
-    <link href="/mermaid/mermaid.css?1673836861" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1673836861"></script>
+    <link href="/mermaid/mermaid.css?1733803623" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733803623"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
