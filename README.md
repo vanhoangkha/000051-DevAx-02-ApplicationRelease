@@ -1,4 +1,4 @@
-# 🚀 DevAx 02: Application Release
+# DevAx 02: Application Release
 
 Implement CI/CD pipelines for application releases.
 
@@ -8,7 +8,7 @@ This is a hands-on workshop from the **AWS First Cloud Journey** series, designe
 
 ## Workshop
 
-📖 **[Start the workshop](https://vanhoangkha.github.io/000051-DevAx-02-ApplicationRelease/)**
+**[Start the workshop](https://vanhoangkha.github.io/000051-DevAx-02-ApplicationRelease/)**
 
 ## Prerequisites
 
